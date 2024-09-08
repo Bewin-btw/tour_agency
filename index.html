@@ -69,6 +69,11 @@
         .rc {
             color: honeydew;
         }
+
+        #tour-types-description {
+            padding-left: 10px;
+            color: rgba(71, 71, 71, 0.277);
+        }
     </style>
 </head>
 
@@ -134,22 +139,39 @@
                 <li><a href="">Whatsapp</a></li>
                 <li><a href="">Instagram</a></li>
                 <li><a href="">Telegram</a></li>
-                <h5>or</h5>
-                <li>
-                    <form action="/submit">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required><br><br>
-
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
-
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
-
-                        <input type="submit" value="Submit">
-                    </form>
-                </li>
             </ul>
+
+            <h2>Or send a form:</h2>
+            <form action="/submit" id="cform">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="tour">Tour type:</label>
+                <select id="tour" name="tour">
+                    <option value="beach">Beach Getaway</option>
+                    <option value="city">City Adventure</option>
+                    <option value="mountain">Mountain Hike</option>
+                </select>
+                <dl id="tour-types-description">
+                    <dt>Beach Getaway:</dt>
+                    <dd>Relaxing, scenic views, sun, sand, ocean breeze.</dd>
+
+                    <dt>City Adventure:</dt>
+                    <dd>Explore culture, architecture, museums, restaurants, nightlife.</dd>
+
+                    <dt>Mountain Hike:</dt>
+                    <dd>Nature, fresh air, exercise, peaceful, scenic landscapes.</dd>
+                </dl>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+
         </section>
     </main>
 
