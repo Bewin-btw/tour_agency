@@ -1,0 +1,11 @@
+/* .nav-link {
+    color: green;
+} */
+
+.nav-link:hover {
+    color: #ffc107;
+}
+
+.nav-link.disabled {
+    color: gray;
+}
