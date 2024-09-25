@@ -5,28 +5,6 @@ body {
   background-color: #f4f4f4;
 }
 
-header {
-  background-color: #000000;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  height: 130px;
-  position: relative;
-}
-
-nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
-}
-
-nav a {
-  margin: 10px;
-  color: white;
-  text-decoration: none;
-}
-
 .container {
   width: 80%;
   margin: auto;

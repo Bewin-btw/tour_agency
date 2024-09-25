@@ -6,28 +6,6 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #000000;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    height: 130px;
-    position: relative;
-}
-
-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-}
-
-nav a {
-    margin: 10px;
-    color: white;
-    text-decoration: none;
-}
-
 h1 {
     font-size: 2.5em;
     margin: 0;
@@ -37,10 +15,6 @@ h1 {
     color: #888;
     font-style: italic;
     margin-top: 10px;
-}
-
-nav a:hover {
-    text-decoration: underline;
 }
 
 main {
