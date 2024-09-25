@@ -1,202 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Client Reviews - RoyalCo</title>
-    <link rel="stylesheet" href="style/stylesreview.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Reviews - RoyalCo</title>
+  <link rel="stylesheet" href="style/stylesreview.css" />
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="style/nav.css" rel="stylesheet" />
+</head>
 
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="style/nav.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">RoyalCo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" href="destinations.html">Destinations</a>
-              <a class="nav-link" href="hottours.html">Hot tours</a>
-              <a class="nav-link" href="news.html">News</a>
-              <a class="nav-link active" href="review.html">Reviews</a>
-              <a class="nav-link" href="contact.html">Contact us</a>
-              <a class="nav-link disabled">Comming soon</a>
-            </div>
-          </div>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">RoyalCo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="destinations.html">Destinations</a>
+          <a class="nav-link" href="hottours.html">Hot tours</a>
+          <a class="nav-link" href="news.html">News</a>
+          <a class="nav-link active" href="review.html">Reviews</a>
+          <a class="nav-link" href="contact.html">Contact us</a>
+          <a class="nav-link disabled">Coming soon</a>
         </div>
-      </nav>
-    </header>
+      </div>
+    </div>
+  </nav>
+</header>
 
-    <main>
-      <h2>What Our Clients Say</h2>
-      <section class="reviews-grid">
-        <div class="review-card">
-          <div class="review-header">
-            <img src="source/maria1.jpg" alt="Maria K." class="review-photo" />
-            <div>
-              <div class="review-name">Maria K.</div>
-              <div class="review-date">September 2024</div>
-            </div>
-          </div>
-          <div class="review-text">
-            <h4>
-              "I had the best vacation ever thanks to RoyalCo! The beach tour
-              was a dream come true. I can't wait to book another tour!"
-            </h4>
-          </div>
-          <div class="rating">
-            <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i
-            ><i>&#9733;</i>
-          </div>
+<main class="container mt-4">
+  <h2 class="text-center mb-4">What Our Clients Say</h2>
+  <section class="reviews-container">
+    <div class="review-card">
+      <div class="d-flex align-items-center mb-3">
+        <img src="source/maria1.jpg" alt="Maria K." class="review-photo" style="width: 50px; height: 50px;" />
+        <div>
+          <div class="review-name">Maria K.</div>
+          <div class="review-date">September 2024</div>
         </div>
+      </div>
+      <h4 class="card-text">
+        "I had the best vacation ever thanks to RoyalCo! The beach tour
+        was a dream come true. I can't wait to book another tour!"
+      </h4>
+      <div class="rating">
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+      </div>
+    </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <img src="source/john.jpg" alt="John S." class="review-photo" />
-            <div>
-              <div class="review-name">John S.</div>
-              <div class="review-date">August 2024</div>
-            </div>
-          </div>
-          <div class="review-text">
-            <h4>
-              "The mountain adventure was breathtaking! Every moment was filled
-              with excitement. I highly recommend RoyalCo to all my friends!"
-            </h4>
-          </div>
-          <div class="rating">
-            <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i
-            ><i>&#9733;</i>
-          </div>
+    <div class="review-card">
+      <div class="d-flex align-items-center mb-3">
+        <img src="source/john.jpg" alt="John S." class="review-photo" style="width: 50px; height: 50px;" />
+        <div>
+          <div class="review-name">John S.</div>
+          <div class="review-date">August 2024</div>
         </div>
+      </div>
+      <h4 class="card-text">
+        "The mountain adventure was breathtaking! Every moment was filled
+        with excitement. I highly recommend RoyalCo to all my friends!"
+      </h4>
+      <div class="rating">
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+      </div>
+    </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <img src="source/emily.jpg" alt="Emily T." class="review-photo" />
-            <div>
-              <div class="review-name">Emily T.</div>
-              <div class="review-date">July 2024</div>
-            </div>
-          </div>
-          <div class="review-text">
-            <h4>
-              "City exploration with RoyalCo exceeded all my expectations. I
-              discovered so many amazing places and met incredible people!"
-            </h4>
-          </div>
-          <div class="rating">
-            <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i
-            ><i>&#9733;</i>
-          </div>
+    <div class="review-card">
+      <div class="d-flex align-items-center mb-3">
+        <img src="source/emily.jpg" alt="Emily T." class="review-photo" style="width: 50px; height: 50px;" />
+        <div>
+          <div class="review-name">Emily T.</div>
+          <div class="review-date">July 2024</div>
         </div>
+      </div>
+      <h4 class="card-text">
+        "City exploration with RoyalCo exceeded all my expectations. I
+        discovered so many amazing places and met incredible people!"
+      </h4>
+      <div class="rating">
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+      </div>
+    </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <img src="source/alex.jpg" alt="Alex P." class="review-photo" />
-            <div>
-              <div class="review-name">Alex P.</div>
-              <div class="review-date">June 2024</div>
-            </div>
-          </div>
-          <div class="review-text">
-            <h4>
-              "RoyalCo is simply the best! From booking to the actual tour,
-              everything was seamless. Thank you for an unforgettable trip!"
-            </h4>
-          </div>
-          <div class="rating">
-            <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i
-            ><i>&#9733;</i>
-          </div>
+    <div class="review-card">
+      <div class="d-flex align-items-center mb-3">
+        <img src="source/alex.jpg" alt="Alex P." class="review-photo" style="width: 50px; height: 50px;" />
+        <div>
+          <div class="review-name">Alex P.</div>
+          <div class="review-date">June 2024</div>
         </div>
+      </div>
+      <h4 class="card-text">
+        "RoyalCo is simply the best! From booking to the actual tour,
+        everything was seamless. Thank you for an unforgettable trip!"
+      </h4>
+      <div class="rating">
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+      </div>
+    </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <img
-              src="source/samantha.jpg"
-              alt="Samantha L."
-              class="review-photo"
-            />
-            <div>
-              <div class="review-name">Samantha L.</div>
-              <div class="review-date">May 2024</div>
-            </div>
-          </div>
-          <div class="review-text">
-            <h4>
-              "My family and I had an amazing time on the RoyalCo city tour! The
-              guide was knowledgeable, and the service was top-notch. We will
-              definitely be back for another adventure!"
-            </h4>
-          </div>
-          <div class="rating">
-            <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i
-            ><i>&#9733;</i>
-          </div>
+    <div class="review-card">
+      <div class="d-flex align-items-center mb-3">
+        <img src="source/samantha.jpg" alt="Samantha L." class="review-photo" style="width: 50px; height: 50px;" />
+        <div>
+          <div class="review-name">Samantha L.</div>
+          <div class="review-date">May 2024</div>
         </div>
+      </div>
+      <h4 class="card-text">
+        "My family and I had an amazing time on the RoyalCo city tour! The
+        guide was knowledgeable, and the service was top-notch. We will
+        definitely be back for another adventure!"
+      </h4>
+      <div class="rating">
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+      </div>
+    </div>
 
-        <div class="review-card">
-          <div class="review-header">
-            <img src="source/david.jpg" alt="David R." class="review-photo" />
-            <div>
-              <div class="review-name">David R.</div>
-              <div class="review-date">April 2024</div>
-            </div>
-          </div>
-          <div class="review-text">
-            <h4>
-              "Best trip ever! The RoyalCo team organized everything perfectly.
-              Highly recommend for anyone looking for a stress-free vacation."
-            </h4>
-          </div>
-          <div class="rating">
-            <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i
-            ><i>&#9733;</i>
-          </div>
+    <div class="review-card">
+      <div class="d-flex align-items-center mb-3">
+        <img src="source/david.jpg" alt="David R." class="review-photo" style="width: 50px; height: 50px;" />
+        <div>
+          <div class="review-name">David R.</div>
+          <div class="review-date">April 2024</div>
         </div>
-      </section>
+      </div>
+      <h4 class="card-text">
+        "Best trip ever! The RoyalCo team organized everything perfectly.
+        Highly recommend for anyone looking for a stress-free vacation."
+      </h4>
+      <div class="rating">
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+      </div>
+    </div>
+  </section>
 
-      <section class="form-container">
-        <h2>Leave Your Review</h2>
-        <form action="#" method="post">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required />
+  <section class="form-container">
+    <h2>Leave Your Review</h2>
+    <form action="#" method="post">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" name="name" required />
+      </div>
 
-          <label for="review">Your Review</label>
-          <textarea id="review" name="review" rows="5" required></textarea>
+      <div class="mb-3">
+        <label for="review" class="form-label">Your Review</label>
+        <textarea class="form-control" id="review" name="review" rows="5" required></textarea>
+      </div>
 
-          <label for="rating">Your Rating</label>
-          <select id="rating" name="rating" required>
-            <option value="" disabled selected>Choose rating</option>
-            <option value="5">5 Stars</option>
-            <option value="4">4 Stars</option>
-            <option value="3">3 Stars</option>
-            <option value="2">2 Stars</option>
-            <option value="1">1 Star</option>
-          </select>
+      <div class="mb-3">
+        <label for="rating" class="form-label">Your Rating</label>
+        <select class="form-select" id="rating" name="rating" required>
+          <option value="" disabled selected>Choose rating</option>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="2">2 Stars</option>
+          <option value="1">1 Star</option>
+        </select>
+      </div>
 
-          <button type="submit" class="btn btn-primary">Submit Review</button>
-        </form>
-      </section>
-    </main>
+      <button type="submit" class="btn btn-primary">Submit Review</button>
+    </form>
+  </section>
+</main>
 
-    <footer>
-      <p style="margin: 0">
-        Created by Erik A., Alana M., Aruzhan A. - September 2024
-      </p>
-      <p style="margin: 5px 0">
-        Contact us at:
-        <a
-          href="mailto:info@touragency.com"
-          style="color: #fff; text-decoration: underline"
-          >info@touragency.com</a
-        >
-      </p>
-    </footer>
-  </body>
+<footer class="text-center mt-4">
+  <p style="margin: 0">
+    Created by Erik A., Alana M., Aruzhan A. - September 2024
+  </p>
+  <p style="margin: 5px 0">
+    Contact us at:
+    <a href="mailto:info@touragency.com" style="color: #fff; text-decoration: underline">info@touragency.com</a>
+  </p>
+</footer>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

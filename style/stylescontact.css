@@ -36,10 +36,11 @@ figcaption {
     color: #333;
 }
 
+/* Adjusting form to fit Bootstrap styling */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 600px; /* Increased max-width for larger screens */
     margin: 0 auto;
 }
 
@@ -52,7 +53,9 @@ select,
 textarea {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #000;
+    border: 1px solid #ced4da; /* Bootstrap border color */
+    border-radius: 0.25rem; /* Bootstrap border radius */
+    box-shadow: none; /* Remove default box-shadow */
 }
 
 button {
@@ -63,13 +66,13 @@ button {
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #e65c00;
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slightly increased scale for hover effect */
 }
 
 footer {
@@ -93,6 +96,8 @@ footer {
     background-color: #f8f8f8;
     padding: 30px;
     text-align: center;
+    width: 100%; /* Full width of the screen */
+    box-sizing: border-box; /* Include padding in width calculation */
     margin-top: 20px;
 }
 
@@ -103,22 +108,31 @@ footer {
 
 .testimonial-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center testimonials in container */
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .testimonial-item {
     max-width: 300px;
+    width: 100%; /* Ensure full width in flex container */
     margin: 15px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .client-photo {
-    width: 100px;
-    border-radius: 50%;
+    width: 100px; /* Задайте фиксированную ширину */
+    height: 100px; /* Задайте фиксированную высоту */
+    border-radius: 50%; /* Делает изображение круглым */
+    object-fit: cover; /* Обрезает изображение, чтобы оно соответствовало размерам контейнера */
     margin-bottom: 15px;
 }
 
