@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hot Tours</title>
     <link rel="stylesheet" href="style/styleshot.css" />
-
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link href="style/nav.css" rel="stylesheet" />
   </head>
   <body>
@@ -14,7 +17,15 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">RoyalCo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -24,70 +35,124 @@
               <a class="nav-link" href="news.html">News</a>
               <a class="nav-link" href="review.html">Reviews</a>
               <a class="nav-link" href="contact.html">Contact us</a>
-              <a class="nav-link disabled">Comming soon</a>
+              <a class="nav-link disabled">Coming soon</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
 
-    <div class="container">
-      <h3>
+    <div class="container mt-4">
+      <h3 class="mb-4">
         We offer you last-minute tours at the best prices in the near future!
         Travel to the best vacation destinations around the world. Have time to
         book an unforgettable trip with maximum benefit!
       </h3>
+      <div id="tourCardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="tour-item p-3">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="source/dubai1.jpg"
+                    class="img-fluid rounded-start"
+                    alt="Dubai"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="tour-content">
+                    <h5 class="tour-title">Dubai, UAE</h5>
+                    <p class="tour-description">
+                      Immerse yourself in the luxury of Dubai: skyscrapers,
+                      golden beaches, spectacular desert safaris and world-class
+                      shopping.
+                    </p>
+                    <p class="tour-price"><strong>Price: 600,000tg</strong></p>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- Dubai -->
-      <div class="tour-item">
-        <div class="tour-images">
-          <img src="source/dubai1.jpg" alt="Dubai" />
-          <img src="source/dubai2.jpg" alt="Dubai" />
+          <div class="carousel-item">
+            <div class="tour-item p-3">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="source/egypt1.jpg"
+                    class="img-fluid rounded-start"
+                    alt="Egypt"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="tour-content">
+                    <h5 class="tour-title">Egypt</h5>
+                    <p class="tour-description">
+                      Discover ancient Egypt: pyramids, Nile cruises and
+                      majestic temples. An ideal place for lovers of history and
+                      the sea.
+                    </p>
+                    <p class="tour-price"><strong>Price: 500,000tg</strong></p>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="tour-item p-3">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="source/thailand1.jpg"
+                    class="img-fluid rounded-start"
+                    alt="Thailand"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class="tour-content">
+                    <h5 class="tour-title">Thailand</h5>
+                    <p class="tour-description">
+                      Enjoy the tropical paradise of Thailand: snow-white
+                      beaches, temples and night markets. Exotic nature and an
+                      unforgettable vacation.
+                    </p>
+                    <p class="tour-price"><strong>Price: 450,000tg</strong></p>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h2 class="tour-title">Dubai, UAE</h2>
-        <p class="tour-description">
-          Immerse yourself in the luxury of Dubai: skyscrapers, golden beaches,
-          spectacular desert safaris and world-class shopping.
-        </p>
-        <p class="tour-price">The price starts from: 600,000tg</p>
-        <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#tourCardCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#tourCardCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
-      <!-- Egypt -->
-      <div class="tour-item">
+      <div class="tour-item mt-4 p-3">
         <div class="tour-images">
-          <img src="source/egypt1.jpg" alt="Egypt" />
-          <img src="source/egypt2.jpeg" alt="Egypt" />
-        </div>
-        <h2 class="tour-title">Egypt</h2>
-        <p class="tour-description">
-          Discover ancient Egypt: pyramids, Nile cruises and majestic temples.
-          An ideal place for lovers of history and the sea.
-        </p>
-        <p class="tour-price">The price starts from: 500,000tg</p>
-        <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
-      </div>
-
-      <!-- Thailand -->
-      <div class="tour-item">
-        <div class="tour-images">
-          <img src="source/thailand1.jpg" alt="Thailand" />
-          <img src="source/thailand2.webp" alt="Thailand" />
-        </div>
-        <h2 class="tour-title">Thailand</h2>
-        <p class="tour-description">
-          Enjoy the tropical paradise of Thailand: snow-white beaches, temples
-          and night markets. Exotic nature and an unforgettable vacation.
-        </p>
-        <p class="tour-price">The price starts from: 450,000tg</p>
-        <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
-      </div>
-
-      <!-- Maldives -->
-      <div class="tour-item">
-        <div class="tour-images">
-          <img src="source/maldives1.jpg" alt="Maldives" />
-          <img src="source/maldives2.jpg" alt="Maldives" />
+          <img src="source/maldives1.jpg" class="img-fluid" alt="Maldives" />
+          <img src="source/maldives2.jpg" class="img-fluid" alt="Maldives" />
         </div>
         <h2 class="tour-title">Maldives</h2>
         <p class="tour-description">
@@ -98,11 +163,10 @@
         <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
       </div>
 
-      <!-- Vietnam -->
-      <div class="tour-item">
+      <div class="tour-item mt-4 p-3">
         <div class="tour-images">
-          <img src="source/Vietnam1.jpg" alt="Vietnam" />
-          <img src="source/Vietnam2.jpg" alt="Vietnam" />
+          <img src="source/Vietnam1.jpg" class="img-fluid" alt="Vietnam" />
+          <img src="source/Vietnam2.jpg" class="img-fluid" alt="Vietnam" />
         </div>
         <h2 class="tour-title">Vietnam</h2>
         <p class="tour-description">
@@ -113,11 +177,10 @@
         <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
       </div>
 
-      <!-- Turkey -->
-      <div class="tour-item">
+      <div class="tour-item mt-4 p-3">
         <div class="tour-images">
-          <img src="source/Turkey1.jpg" alt="Turkey" />
-          <img src="source/Turkey2.jpg" alt="Turkey" />
+          <img src="source/Turkey1.jpg" class="img-fluid" alt="Turkey" />
+          <img src="source/Turkey2.jpg" class="img-fluid" alt="Turkey" />
         </div>
         <h2 class="tour-title">Turkey</h2>
         <p class="tour-description">
@@ -128,6 +191,7 @@
         <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
       </div>
     </div>
+
     <footer>
       Created by Erik A. Alana M. Aruzhan A., September 2024. Contact us at:
       info@touragency.com

@@ -13,7 +13,7 @@ body {
 .news-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  /*gap: 20px;*/
 }
 
 .news-item {
