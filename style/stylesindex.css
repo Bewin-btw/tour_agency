@@ -52,6 +52,12 @@ figure img {
   border-radius: 10px;
 }
 
+.carousel-item img{
+  height: 1000px;
+  object-fit: cover;
+  width: 100%;
+}
+
 .royal-co {
   color: honeydew;
 }
