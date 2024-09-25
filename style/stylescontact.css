@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 130px;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+nav a {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.sub-heading {
+    color: #888;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    font-style: italic;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #000;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65c00;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Additional styles for testimonials */
+.testimonial {
+    font-style: italic;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-left: 5px solid #000;
+    margin: 20px 0;
+}
+
+.client-testimonials {
+    background-color: #f8f8f8;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.testimonial-heading {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    max-width: 300px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.client-photo {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.client-quote {
+    font-style: italic;
+}
+
+.client-name {
+    margin: 0;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: underline;
+}

@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  height: 130px;
+  position: relative;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+header h4 {
+  margin-top: 0px;
+  color: rgb(54, 58, 58);
+}
+
+nav a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.tour-types {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour {
+  width: 30%;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.royal-co {
+  color: honeydew;
+}
+
+#tour-types-description {
+  padding-left: 10px;
+  color: rgba(71, 71, 71, 0.277);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Tour Agency</title>
+    <link rel="stylesheet" href="style/stylescontact.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Explore the World with Us</h1>
+      <div class="sub-heading">tour agency <strong>"RoyalCo"</strong></div>
+      <nav>
+        <a href="index.html">RoyalCo</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="contact.html">Contact us</a>
+        <a href="hottours.html">Hot tours</a>
+        <a href="news.html">News</a>
+        <a href="review.html">Review</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like to book a tour, feel free to
+          contact us using the form below.
+        </p>
+
+        <figure>
+          <img
+            src="source/tourimage.jpg"
+            alt="Beautiful landscape of a tour destination"
+          />
+          <figcaption>Explore stunning landscapes with our tours!</figcaption>
+        </figure>
+
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="tour">Select a Tour:</label>
+          <select id="tour" name="tour">
+            <option value="beach">Beach Tour</option>
+            <option value="mountain">Mountain Adventure</option>
+            <option value="city">City Exploration</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <blockquote class="testimonial">
+        "Travel is the only thing you buy that makes you richer."
+      </blockquote>
+
+      <section class="client-testimonials">
+        <h2 class="testimonial-heading">What Our Clients Say</h2>
+
+        <div class="testimonial-container">
+          <div class="testimonial-item">
+            <img
+              src="source/maria1.jpg"
+              alt="Client photo"
+              class="client-photo"
+            />
+            <p class="client-quote">
+              "I had the best vacation ever thanks to RoyalCo! The beach tour
+              was a dream come true!"
+            </p>
+            <p class="client-name"><strong>- Maria K.</strong></p>
+          </div>
+
+          <div class="testimonial-item">
+            <img
+              src="source/john.jpg"
+              alt="Client photo"
+              class="client-photo"
+            />
+            <p class="client-quote">
+              "The mountain adventure was breathtaking! I would recommend this
+              to everyone!"
+            </p>
+            <p class="client-name"><strong>- John S.</strong></p>
+          </div>
+
+          <div class="testimonial-item">
+            <img
+              src="source/emily.jpg"
+              alt="Client photo"
+              class="client-photo"
+            />
+            <p class="client-quote">
+              "City exploration was unforgettable! RoyalCo exceeded my
+              expectations."
+            </p>
+            <p class="client-name"><strong>- Emily T.</strong></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Erik A., Alana M., Aruzhan A. - September 2024</p>
+      <p>
+        Contact us at:
+        <a href="mailto:info@touragency.com" class="footer-link"
+          >info@touragency.com</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
