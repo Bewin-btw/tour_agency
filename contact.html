@@ -41,7 +41,7 @@
       <figcaption>Explore stunning landscapes with our tours!</figcaption>
     </figure>
 
-    <form action="#" method="post">
+    <form id="contactForm" action="#" method="post">
       <div class="mb-3">
         <label for="name" class="form-label">Name:</label>
         <input type="text" id="name" name="name" class="form-control" required />
@@ -103,13 +103,18 @@
       </div>
     </div>
   </section>
+
+
+  <button id="changeColorBtn">Change Background Color</button>
 </main>
 
 <footer>
+  <p id="currentDateTime"></p>
   <p>Created by Erik A., Alana M., Aruzhan A. - September 2024</p>
   <p>Contact us at: <a href="mailto:info@touragency.com" class="footer-link">info@touragency.com</a></p>
 </footer>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scriptcontact.js"></script>
 </body>
 </html>
