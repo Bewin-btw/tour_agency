@@ -61,6 +61,7 @@
               />
             </div>
             <h2 class="news-title">New Luxury Resort Opens in Bali</h2>
+
             <p class="news-description">
               A new luxury resort has opened its doors in Bali, offering
               breathtaking views, private villas, and world-class amenities.
@@ -162,9 +163,31 @@
       </div>
     </div>
 
+    <!-- Кнопка для открытия окна подписки -->
+    <button class="btn btn-primary mt-3" onclick="openModal()">
+      Подписаться на новости
+    </button>
+
+    <!-- Модальное окно -->
+    <div id="subscriptionModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Подписка на новости</h2>
+        <p>Введите ваш email для подписки:</p>
+        <input
+          type="email"
+          id="emailInput"
+          class="form-control"
+          placeholder="Введите email"
+        />
+        <button onclick="subscribe()">Подписаться</button>
+      </div>
+    </div>
+
     <footer>
       Created by Erik A. Alana M. Aruzhan A., September 2024. Contact us at:
       info@touragency.com
     </footer>
+    <script src="script/news.js"></script>
   </body>
 </html>
