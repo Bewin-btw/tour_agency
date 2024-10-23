@@ -36,10 +36,80 @@
 
   <main>
     <section id="utilities">
-      <div class="utilities">
-        <div id="currentDateTime" class="mt-3"></div>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-switcher">
+          <input type="checkbox" id="theme-switcher">
+          <div class="slider round"></div>
+        </label>
+        <span>Toggle Theme</span>
+      </div>
+
+      <div id="time-section">
+        <button id="time-button" class="btn">Show Current Time</button>
+        <div id="time-containe"></div>
+        <p id="time-container" class="time-display">Click the button to see the time!</p>
+      </div>
+      
+
+    </section>
+
+    <section id="facts">
+      <div id="fact-section">
+        <div class="fact-controls">
+          <button id="new-fact-button" class="btn">Get a Random Fact</button>
+          <p id="fact-container" class="fact-display">Click the button to see a random fact!</p>
+        </div>
+        <div class="rating-section">
+          <h2>Rate our facts</h2>
+          <div id="star-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+        </div>
       </div>
     </section>
+    
+
+    <section id="Your dream destination!">
+      <div id="multi-step-form">
+        <div class="form-step">
+          <h3>Step 1: Choose Your Destination</h3>
+          <select>
+            <option value="paris">Paris</option>
+            <option value="alps">Alps</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="bali">Bali</option>
+          </select>
+        </div>
+      
+        <div class="form-step" style="display:none;">
+          <h3>Step 2: Choose Your Travel Date</h3>
+          <input type="date">
+        </div>
+      
+        <div class="form-step" style="display:none;">
+          <h3>Step 3: Provide Your Contact Information</h3>
+          <input id="name-input" type="text" placeholder="Full Name">
+          <input id="email-input" type="email" placeholder="Email Address">
+        </div>
+      
+        <div class="form-navigation">
+          <button id="back-button" class="btn" style="display:none;">Back</button>
+          <button id="next-button" class="btn">Next</button>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="greet">
+      <div id="greeting-section">
+        <p id="greeting">Welcome!</p>
+      </div>      
+    </section>
+
 
     <section id="europe">
       <h2>Europe</h2>
