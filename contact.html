@@ -36,6 +36,7 @@
     <h2>Contact Us</h2>
     <p>If you have any questions or would like to book a tour, feel free to contact us using the form below.</p>
 
+
     <figure>
       <img src="source/tourimage.jpg" alt="Beautiful landscape of a tour destination" />
       <figcaption>Explore stunning landscapes with our tours!</figcaption>
@@ -44,12 +45,12 @@
     <form id="contactForm" action="#" method="post">
       <div class="mb-3">
         <label for="name" class="form-label">Name:</label>
-        <input type="text" id="name" name="name" class="form-control" required />
+        <input type="text" id="name" name="name" class="form-control"  />
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Email:</label>
-        <input type="email" id="email" name="email" class="form-control" required />
+        <input id="email" name="email" class="form-control" />
       </div>
 
       <div class="mb-3">
@@ -105,8 +106,11 @@
   </section>
 
 
-  <button id="changeColorBtn">Change Background Color</button>
+  <button class="btn btn-primary mt-3" onclick="changeBackgroundColor()">
+    Change Background Color
+  </button>
 </main>
+
 
 <footer>
   <p id="currentDateTime"></p>
@@ -115,6 +119,6 @@
 </footer>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="scriptcontact.js"></script>
+<script src="script/scriptcontact.js"></script>
 </body>
 </html>

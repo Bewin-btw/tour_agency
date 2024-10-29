@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73701e39-9c97-4927-9d6a-5d84710b98ad" name="Changes" comment="" />
+    <list default="true" id="73701e39-9c97-4927-9d6a-5d84710b98ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/source/background.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/sadmeoww.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/scriptreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/scriptreview.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/alanamukanova/tour_agency",
+    "last_opened_file_path": "/Users/alanamukanova/tour_agency/source",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +99,8 @@
       <workItem from="1729764141955" duration="1644000" />
       <workItem from="1730228498620" duration="3728000" />
       <workItem from="1730232597550" duration="13000" />
+      <workItem from="1730232612731" duration="488000" />
+      <workItem from="1730233176452" duration="303000" />
     </task>
     <servers />
   </component>
