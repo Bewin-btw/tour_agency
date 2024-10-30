@@ -4,6 +4,9 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
+.hot-tours-section {
+  margin-left: 20px;
+}
 
 .container {
   width: 80%;
@@ -49,4 +52,26 @@ footer {
   text-align: center;
   padding: 10px;
   margin-top: 20px;
+}
+
+/* styleshot.css */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tour-item {
+  animation: fadeIn 1s ease-in;
+}
+
+.filtered-tour {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
 }

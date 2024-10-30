@@ -48,6 +48,22 @@
         Travel to the best vacation destinations around the world. Have time to
         book an unforgettable trip with maximum benefit!
       </h3>
+      <!-- Добавь в основной раздел для горячих туров -->
+      <section class="hot-tours-section">
+        <h4>Find a tour you like</h4>
+
+        <input
+          type="number"
+          id="priceFilter"
+          placeholder="Максимальная цена"
+          oninput="filterToursByPrice(this.value)"
+        />
+
+        <!-- Контейнер для списка туров -->
+        <div id="tour-container" class="container"></div>
+      </section>
+      <div id="filtered-tours" class="container"></div>
+
       <div id="tourCardCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -190,6 +206,7 @@
         <p class="tour-price">The price starts from: 550,000tg</p>
         <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
       </div>
+
       <button class="btn btn-primary mt-3" onclick="changeBackgroundColor()">
         Change Background Color
       </button>

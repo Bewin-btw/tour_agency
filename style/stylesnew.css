@@ -83,3 +83,77 @@ footer {
   font-size: 24px;
   cursor: pointer;
 }
+
+/* Основные стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Затемнённый фон */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px; /* Ограничение по ширине */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #ff0000; /* Изменение цвета при наведении */
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.modal-content input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
