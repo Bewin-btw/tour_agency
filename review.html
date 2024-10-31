@@ -33,8 +33,22 @@
 
 <main class="container mt-4">
   <h2 class="text-center mb-4">What Our Clients Say</h2>
+
+  <!-- Фильтр по оценкам -->
+  <div class="mb-4">
+    <label for="ratingFilter" class="form-label">Filter by Rating:</label>
+    <select id="ratingFilter" class="form-select">
+      <option value="">All</option>
+      <option value="5">5 Stars</option>
+      <option value="4">4 Stars</option>
+      <option value="3">3 Stars</option>
+      <option value="2">2 Stars</option>
+      <option value="1">1 Star</option>
+    </select>
+  </div>
+
   <section class="reviews-container">
-    <div class="review-card">
+    <div class="review-card" data-rating="5">
       <div class="d-flex align-items-center mb-3">
         <img src="source/maria1.jpg" alt="Maria K." class="review-photo" style="width: 50px; height: 50px;" />
         <div>
@@ -51,7 +65,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card" data-rating="4">
       <div class="d-flex align-items-center mb-3">
         <img src="source/john.jpg" alt="John S." class="review-photo" style="width: 50px; height: 50px;" />
         <div>
@@ -61,14 +75,14 @@
       </div>
       <h4 class="card-text">
         "The mountain adventure was breathtaking! Every moment was filled
-        with excitement. I highly recommend RoyalCo to all my friends!"
+        with excitement."
       </h4>
       <div class="rating">
-        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card" data-rating="3">
       <div class="d-flex align-items-center mb-3">
         <img src="source/emily.jpg" alt="Emily T." class="review-photo" style="width: 50px; height: 50px;" />
         <div>
@@ -77,15 +91,14 @@
         </div>
       </div>
       <h4 class="card-text">
-        "City exploration with RoyalCo exceeded all my expectations. I
-        discovered so many amazing places and met incredible people!"
+        "City exploration with RoyalCo exceeded not all my expectations."
       </h4>
       <div class="rating">
-        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card" data-rating="5">
       <div class="d-flex align-items-center mb-3">
         <img src="source/alex.jpg" alt="Alex P." class="review-photo" style="width: 50px; height: 50px;" />
         <div>
@@ -102,7 +115,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card" data-rating="5">
       <div class="d-flex align-items-center mb-3">
         <img src="source/samantha.jpg" alt="Samantha L." class="review-photo" style="width: 50px; height: 50px;" />
         <div>
@@ -120,7 +133,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card" data-rating="4">
       <div class="d-flex align-items-center mb-3">
         <img src="source/david.jpg" alt="David R." class="review-photo" style="width: 50px; height: 50px;" />
         <div>
@@ -133,7 +146,7 @@
         Highly recommend for anyone looking for a stress-free vacation."
       </h4>
       <div class="rating">
-        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
+        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>
       </div>
     </div>
   </section>
@@ -174,5 +187,33 @@
 </footer>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script/scriptreview.js"></script>
+<script>
+  // Функция для фильтрации отзывов
+  document.getElementById('ratingFilter').addEventListener('change', function() {
+    const selectedRating = this.value;
+    const reviews = document.querySelectorAll('.review-card');
+
+    reviews.forEach(review => {
+      const reviewRating = review.getAttribute('data-rating');
+      if (selectedRating === "" || reviewRating === selectedRating) {
+        review.style.display = "block"; // Показываем отзыв
+      } else {
+        review.style.display = "none"; // Скрываем отзыв
+      }
+    });
+
+    // Сохраняем выбранный рейтинг в локальном хранилище
+    localStorage.setItem('selectedRating', selectedRating);
+  });
+
+  // Применяем сохранённый фильтр при загрузке страницы
+  window.onload = function() {
+    const savedRating = localStorage.getItem('selectedRating');
+    if (savedRating) {
+      document.getElementById('ratingFilter').value = savedRating;
+      document.getElementById('ratingFilter').dispatchEvent(new Event('change'));
+    }
+  };
+</script>
 </body>
 </html>
