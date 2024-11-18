@@ -206,11 +206,49 @@
         <p class="tour-price">The price starts from: 550,000tg</p>
         <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
       </div>
-
-      <button class="btn btn-primary mt-3" onclick="changeBackgroundColor()">
-        Change Background Color
-      </button>
     </div>
+
+    <section class="hot-tour-container" id="faq-section">
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div class="faq-item">
+        <h3 class="faq-question">What is a hot tour?</h3>
+        <p class="faq-answer">
+          A hot tour is a special discounted travel offer available for a
+          limited time, usually due to last-minute availability.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How can I book a tour?</h3>
+        <p class="faq-answer">
+          You can book a tour by visiting our tours page, selecting the desired
+          tour, and following the booking instructions.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What payment methods do you accept?</h3>
+        <p class="faq-answer">
+          We accept credit and debit cards, as well as online payments. For more
+          information, please visit our "contact us" page.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Which airlines do you cooperate with?</h3>
+        <p class="faq-answer">
+          All companies that serve our city, as well as all companies that can
+          be places of flight
+        </p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Hotels how many stars do you offer?</h3>
+        <p class="faq-answer">Mostly 4 and 5 star hotels</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Do you provide guides to explore the area?</h3>
+        <p class="faq-answer">
+          No, but to contact the company that does this, write to "contact us"
+        </p>
+      </div>
+    </section>
 
     <footer>
       <div id="datetime"></div>
@@ -220,5 +258,18 @@
     </footer>
     <script src="script/hottours.js"></script>
     <script src="./script/login.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach((question) => {
+          question.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+            answer.style.display =
+              answer.style.display === "block" ? "none" : "block";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
