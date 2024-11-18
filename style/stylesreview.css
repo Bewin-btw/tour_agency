@@ -121,7 +121,7 @@ body.light-theme .form-select {
 body.dark-theme .review-card {
     background-color: #242424;
     border: 1px solid #444444;
-    color: #ffffff;
+    color: #ffffff; /* Белый текст для тёмной темы */
 }
 
 body.light-theme .review-card {
@@ -136,6 +136,7 @@ body.light-theme .review-card {
     border-radius: 8px;
     margin-bottom: 1rem;
 }
+
 /* Общий стиль кнопки переключения темы */
 .theme-toggle-wrapper {
     display: flex;
@@ -195,6 +196,7 @@ body.dark-theme #theme-toggle:hover {
     background-color: #444;
     border-color: #555;
 }
+
 /* Цвет текста отзывов по умолчанию (чёрный шрифт) */
 .review-card {
     color: #000;
@@ -207,8 +209,9 @@ body.light-theme .review-card {
 
 /* Обновление для тёмной темы */
 body.dark-theme .review-card {
-    color: #000;
+    color: #fff; /* Белый текст в темной теме */
 }
+
 /* Фон карточек отзывов */
 .review-card {
     background-color: #555; /* Тёмно-серый фон */
@@ -227,7 +230,9 @@ body.light-theme .review-card {
 /* Фон для тёмной темы */
 body.dark-theme .review-card {
     background-color: #555; /* Тёмно-серый фон для тёмной темы */
+    color: #fff; /* Белый текст для тёмной темы */
 }
+
 /* Стили для формы */
 .form-container {
     background-color: #444; /* Темно-серый фон */
@@ -297,5 +302,43 @@ body.light-theme .form-container button {
 }
 
 body.light-theme .form-container button:hover {
-    background-color: #555; /* Тёмно-серый фон при наведении */
+    background-color: #555; /* Светлый синий */
+}
+
+/* Настройки для темной темы */
+body.dark-theme .form-container {
+    background-color: #222; /* Темный фон */
+    color: #fff; /* Белый текст */
+}
+
+body.dark-theme .form-container input[type="text"],
+body.dark-theme .form-container textarea,
+body.dark-theme .form-container select {
+    background-color: #444; /* Темный фон инпутов */
+    color: #fff; /* Белый текст */
+    border-color: #666; /* Темные границы */
+}
+
+body.dark-theme .form-container button {
+    background-color: #007bff; /* Синий фон кнопки */
+    color: #fff; /* Белый текст */
+}
+
+body.dark-theme .form-container button:hover {
+    background-color: #0056b3; /* При наведении - темный синий */
+}
+
+/* Настройки для "filter by rating" */
+body.dark-theme .ratingFilter {
+    background-color: #444; /* Темный фон для фильтра */
+    color: #fff; /* Белый текст */
+    border: 1px solid #666; /* Темная граница */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+body.light-theme .ratingFilter {
+    background-color: #fff; /* Белый фон для фильтра */
+    color: #000; /* Темный текст */
+    border: 1px solid #ccc; /* Светлая граница */
 }
