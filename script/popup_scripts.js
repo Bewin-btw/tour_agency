@@ -101,19 +101,22 @@ const multiStepForm = () => {
     const backButton = document.querySelector('#back-button');
     const emailInput = document.querySelector('#email-input');
 
-    // Проверяем, залогинен ли пользователь
+    // Проверка, залогинен ли пользователь
     const isLoggedIn = () => {
         const username = localStorage.getItem('username');
         return !!username; // Вернет true, если пользователь залогинен
     };
 
+    // Заполнение email по умолчанию из профиля
     const prefillEmail = () => {
         const username = localStorage.getItem('username');
-        if (username && emailInput) {
-            emailInput.value = `${username}@gmail.com`;
+        const savedEmail = localStorage.getItem('email');
+        if (emailInput) {
+            emailInput.value = savedEmail || `${username}@gmail.com`; // Используем сохраненный email или генерируем новый
         }
     };
 
+    // Обновление шага формы
     const updateStep = () => {
         steps.forEach((step, index) => {
             step.style.display = index === currentStep ? 'block' : 'none';
@@ -122,6 +125,7 @@ const multiStepForm = () => {
         nextButton.textContent = currentStep === steps.length - 1 ? 'Submit' : 'Next';
     };
 
+    // Валидация полей формы
     const validateFields = () => {
         if (!isLoggedIn()) {
             alert('You need to be logged in to submit the form.');
@@ -155,28 +159,40 @@ const multiStepForm = () => {
     const validateTravelDate = (dateString) => {
         const inputDate = new Date(dateString);
         const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        return inputDate > today;
+        today.setHours(0, 0, 0, 0); // Устанавливаем время на 00:00 для корректного сравнения
+        return inputDate > today; // Проверяем, что дата больше сегодняшней
     };
 
     const validateFullName = (name) => {
-        const words = name.trim().split(/\s+/);
+        const words = name.trim().split(/\s+/); // Разделяем строку на слова
         return words.length >= 2;
     };
 
     const resetForm = () => {
+        // Сбрасываем поля формы
         steps.forEach(step => {
             const fields = step.querySelectorAll('input, select');
             fields.forEach(field => field.value = '');
         });
 
-        currentStep = 0;
+        currentStep = 0; // Сбрасываем шаг на начальный
         updateStep();
+    };
+
+    // Сохранение измененного email
+    const saveEmail = () => {
+        const currentEmail = emailInput.value.trim();
+        const savedEmail = localStorage.getItem('email');
+        if (currentEmail !== savedEmail) {
+            localStorage.setItem('email', currentEmail);
+            alert('Your email has been updated.');
+        }
     };
 
     nextButton.addEventListener('click', () => {
         if (currentStep === steps.length - 1) {
             if (!validateFields()) return;
+            saveEmail(); // Сохраняем email при отправке формы
             alert('Form submitted successfully!');
             resetForm();
             return;
