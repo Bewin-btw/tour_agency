@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - RoyalCo Tour Agency</title>
+  <link href="style/stylesindex.css" rel="stylesheet" />
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="style/nav.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="royalco.html">RoyalCo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="destinations.html">Destinations</a>
+            <a class="nav-link" href="hottours.html">Hot tours</a>
+            <a class="nav-link" href="news.html">News</a>
+            <a class="nav-link" href="review.html">Reviews</a>
+            <a class="nav-link" href="contact.html">Contact us</a>
+            <a class="nav-link" id="profileLink" href="index.html">Login</a>
+          </div>
+          <button id="logoutBtn" class="btn btn-outline-danger ms-auto">Logout</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="profile">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow">
+              <div class="card-header bg-primary text-white">
+                <h3 class="text-center">Your Profile</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Name:</strong> <span id="userName">John Doe</span></p>
+                <p><strong>Email:</strong> <span id="userEmail">johndoe@example.com</span></p>
+                <p><strong>Member Since:</strong> <span id="userMemberSince">January 2024</span></p>
+              </div>
+              <div class="card-footer text-center">
+                <button class="btn btn-danger" id="logoutBtnProfile">Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="text-center text-muted">
+      Created by Erik A. Alana M. Aruzhan A., September 2024. Contact us at: info@touragency.com
+    </p>
+  </footer>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script/profile.js"></script>
+  <script src="./script/login.js"></script>
+</body>
+
+</html>
