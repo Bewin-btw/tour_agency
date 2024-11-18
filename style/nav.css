@@ -9,3 +9,13 @@
 .nav-link.disabled {
     color: gray;
 }
+
+/* .navbar-toggler {
+    display: flex !important;
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+  } */

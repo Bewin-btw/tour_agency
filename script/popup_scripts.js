@@ -99,6 +99,20 @@ const multiStepForm = () => {
     const steps = document.querySelectorAll('.form-step');
     const nextButton = document.querySelector('#next-button');
     const backButton = document.querySelector('#back-button');
+    const emailInput = document.querySelector('#email-input');
+
+    // Проверяем, залогинен ли пользователь
+    const isLoggedIn = () => {
+        const username = localStorage.getItem('username');
+        return !!username; // Вернет true, если пользователь залогинен
+    };
+
+    const prefillEmail = () => {
+        const username = localStorage.getItem('username');
+        if (username && emailInput) {
+            emailInput.value = `${username}@gmail.com`;
+        }
+    };
 
     const updateStep = () => {
         steps.forEach((step, index) => {
@@ -109,7 +123,11 @@ const multiStepForm = () => {
     };
 
     const validateFields = () => {
-        // Проверяем, что все поля на текущем шаге заполнены
+        if (!isLoggedIn()) {
+            alert('You need to be logged in to submit the form.');
+            return false;
+        }
+
         const fields = steps[currentStep].querySelectorAll('input, select');
         for (const field of fields) {
             if (!field.value.trim()) {
@@ -137,25 +155,21 @@ const multiStepForm = () => {
     const validateTravelDate = (dateString) => {
         const inputDate = new Date(dateString);
         const today = new Date();
-        today.setHours(0, 0, 0, 0); // Устанавливаем время на 00:00 для корректного сравнения
-
-        return inputDate > today; // Проверяем, что дата больше сегодняшней
+        today.setHours(0, 0, 0, 0);
+        return inputDate > today;
     };
 
     const validateFullName = (name) => {
-        // Проверяем, чтобы было как минимум два слова
-        const words = name.trim().split(/\s+/); // Разделяем строку на слова
+        const words = name.trim().split(/\s+/);
         return words.length >= 2;
     };
 
     const resetForm = () => {
-        // Сбрасываем поля формы
         steps.forEach(step => {
             const fields = step.querySelectorAll('input, select');
             fields.forEach(field => field.value = '');
         });
 
-        // Сбрасываем шаг на начальный
         currentStep = 0;
         updateStep();
     };
@@ -164,7 +178,7 @@ const multiStepForm = () => {
         if (currentStep === steps.length - 1) {
             if (!validateFields()) return;
             alert('Form submitted successfully!');
-            resetForm(); // Сброс формы после отправки
+            resetForm();
             return;
         }
         if (!validateFields()) return;
@@ -178,11 +192,8 @@ const multiStepForm = () => {
     });
 
     updateStep();
+    prefillEmail(); // Заполняем email при загрузке формы
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-    multiStepForm();
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     const bookNowButtons = document.querySelectorAll('.book-now');
@@ -241,12 +252,9 @@ const subForm = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    createStarRating();
-    updateFact();
-    themeToggle();
     displayTime();
-    handleImageNavigation();
     multiStepForm();
+
     displayGreeting();
     subForm();
 });
