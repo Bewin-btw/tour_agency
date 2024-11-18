@@ -7,12 +7,27 @@ if (loginForm) {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        if (username === 'user' && password === 'pass') {
-            localStorage.setItem('username', username);
-            alert('Login successful');
-            window.location.href = 'index.html'; 
-        } else {
-            alert('Invalid username or password');
+        const buttonId = e.submitter.id
+
+        if (buttonId === "sign-up") {
+            const users = JSON.parse(localStorage.getItem('users')) || {};
+            if (users[username]) {
+                alert('Username already exists');
+            } else {
+                users[username] = password;
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('Sign-up successful. Please log in.');
+                window.location.href = 'index.html';
+            }
+        } else if (buttonId === 'sign-in') {
+            const users = JSON.parse(localStorage.getItem('users')) || {};
+            if (users[username] === password) {
+                localStorage.setItem('username', username);
+                alert('Login successful');
+                window.location.href = 'royalco.html';
+            } else {
+                alert('Invalid username or password');
+            }
         }
     });
 }
@@ -20,7 +35,7 @@ if (loginForm) {
 logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('username');
     alert('Logged out');
-    window.location.href = 'login.html'; 
+    window.location.href = 'index.html';
 });
 
 function toggleLogoutButton() {
