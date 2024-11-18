@@ -1,0 +1,551 @@
+Index: style/stylescontact.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>body {\n    font-family: Arial, sans-serif;\n    background-color: #fff;\n    color: #000;\n    margin: 0;\n    padding: 0;\n}\n\nh1 {\n    font-size: 2.5em;\n    margin: 0;\n}\n\n.sub-heading {\n    color: #888;\n    font-style: italic;\n    margin-top: 10px;\n}\n\nmain {\n    padding: 20px;\n}\n\nfigure {\n    text-align: center;\n    margin: 20px 0;\n}\n\nimg {\n    max-width: 100%;\n    height: auto;\n}\n\nfigcaption {\n    font-style: italic;\n    color: #333;\n}\n\n/* Adjusting form to fit Bootstrap styling */\nform {\n    display: flex;\n    flex-direction: column;\n    max-width: 600px; /* Increased max-width for larger screens */\n    margin: 0 auto;\n}\n\nlabel {\n    margin-top: 10px;\n}\n\ninput,\nselect,\ntextarea {\n    padding: 10px;\n    margin-top: 5px;\n    border: 1px solid #ced4da; /* Bootstrap border color */\n    border-radius: 0.25rem; /* Bootstrap border radius */\n    box-shadow: none; /* Remove default box-shadow */\n}\n\nbutton {\n    margin-top: 20px;\n    padding: 15px;\n    font-size: 1.2em;\n    background-color: #ff6600;\n    color: #fff;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer; /* Change cursor to pointer */\n    transition: background-color 0.3s ease, transform 0.3s ease;\n}\n\nbutton:hover {\n    background-color: #e65c00;\n    transform: scale(1.05); /* Slightly increased scale for hover effect */\n}\n\nfooter {\n    background-color: #000;\n    color: #fff;\n    text-align: center;\n    padding: 15px 0;\n    margin-top: 30px;\n}\n\n/* Additional styles for testimonials */\n.testimonial {\n    font-style: italic;\n    background-color: #f0f0f0;\n    padding: 15px;\n    border-left: 5px solid #000;\n    margin: 20px 0;\n}\n\n.client-testimonials {\n    background-color: #f8f8f8;\n    padding: 30px;\n    text-align: center;\n    width: 100%; /* Full width of the screen */\n    box-sizing: border-box; /* Include padding in width calculation */\n    margin-top: 20px;\n}\n\n.testimonial-heading {\n    font-size: 1.8em;\n    margin-bottom: 20px;\n}\n\n.testimonial-container {\n    display: flex;\n    justify-content: center; /* Center testimonials in container */\n    margin-top: 20px;\n    flex-wrap: wrap;\n}\n\n.testimonial-item {\n    max-width: 300px;\n    width: 100%; /* Ensure full width in flex container */\n    margin: 15px;\n    padding: 20px;\n    background-color: #fff;\n    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);\n    border-radius: 0.5rem; /* Rounded corners */\n    transition: transform 0.3s ease; /* Smooth transform effect */\n}\n\n.testimonial-item:hover {\n    transform: scale(1.05); /* Slightly scale up on hover */\n}\n\n.client-photo {\n    width: 100px; /* Задайте фиксированную ширину */\n    height: 100px; /* Задайте фиксированную высоту */\n    border-radius: 50%; /* Делает изображение круглым */\n    object-fit: cover; /* Обрезает изображение, чтобы оно соответствовало размерам контейнера */\n    margin-bottom: 15px;\n}\n\n.client-quote {\n    font-style: italic;\n}\n\n.client-name {\n    margin: 0;\n}\n\n.footer-link {\n    color: #fff;\n    text-decoration: underline;\n}\n.drop-area {\n    border: 2px dashed #007bff;\n    padding: 20px;\n    text-align: center;\n    margin-bottom: 15px;\n    transition: background-color 0.3s;\n}\n\n.drop-area.hover {\n    background-color: #f0f8ff;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/style/stylescontact.css b/style/stylescontact.css
+--- a/style/stylescontact.css	
++++ b/style/stylescontact.css	
+@@ -1,11 +1,14 @@
++/* Базовые стили для body */
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #fff;
+     color: #000;
+     margin: 0;
+     padding: 0;
++    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+ }
+ 
++/* Стили для заголовков и текста */
+ h1 {
+     font-size: 2.5em;
+     margin: 0;
+@@ -17,6 +20,7 @@
+     margin-top: 10px;
+ }
+ 
++/* Основные стили */
+ main {
+     padding: 20px;
+ }
+@@ -36,11 +40,11 @@
+     color: #333;
+ }
+ 
+-/* Adjusting form to fit Bootstrap styling */
++/* Стили для формы */
+ form {
+     display: flex;
+     flex-direction: column;
+-    max-width: 600px; /* Increased max-width for larger screens */
++    max-width: 600px;
+     margin: 0 auto;
+ }
+ 
+@@ -53,9 +57,8 @@
+ textarea {
+     padding: 10px;
+     margin-top: 5px;
+-    border: 1px solid #ced4da; /* Bootstrap border color */
+-    border-radius: 0.25rem; /* Bootstrap border radius */
+-    box-shadow: none; /* Remove default box-shadow */
++    border: 1px solid #ced4da;
++    border-radius: 0.25rem;
+ }
+ 
+ button {
+@@ -66,13 +69,13 @@
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+-    cursor: pointer; /* Change cursor to pointer */
++    cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+ 
+ button:hover {
+     background-color: #e65c00;
+-    transform: scale(1.05); /* Slightly increased scale for hover effect */
++    transform: scale(1.05);
+ }
+ 
+ footer {
+@@ -83,7 +86,7 @@
+     margin-top: 30px;
+ }
+ 
+-/* Additional styles for testimonials */
++/* Стили для отзывов */
+ .testimonial {
+     font-style: italic;
+     background-color: #f0f0f0;
+@@ -96,8 +99,8 @@
+     background-color: #f8f8f8;
+     padding: 30px;
+     text-align: center;
+-    width: 100%; /* Full width of the screen */
+-    box-sizing: border-box; /* Include padding in width calculation */
++    width: 100%;
++    box-sizing: border-box;
+     margin-top: 20px;
+ }
+ 
+@@ -108,31 +111,31 @@
+ 
+ .testimonial-container {
+     display: flex;
+-    justify-content: center; /* Center testimonials in container */
++    justify-content: center;
+     margin-top: 20px;
+     flex-wrap: wrap;
+ }
+ 
+ .testimonial-item {
+     max-width: 300px;
+-    width: 100%; /* Ensure full width in flex container */
++    width: 100%;
+     margin: 15px;
+     padding: 20px;
+     background-color: #fff;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+-    border-radius: 0.5rem; /* Rounded corners */
+-    transition: transform 0.3s ease; /* Smooth transform effect */
++    border-radius: 0.5rem;
++    transition: transform 0.3s ease;
+ }
+ 
+ .testimonial-item:hover {
+-    transform: scale(1.05); /* Slightly scale up on hover */
++    transform: scale(1.05);
+ }
+ 
+ .client-photo {
+-    width: 100px; /* Задайте фиксированную ширину */
+-    height: 100px; /* Задайте фиксированную высоту */
+-    border-radius: 50%; /* Делает изображение круглым */
+-    object-fit: cover; /* Обрезает изображение, чтобы оно соответствовало размерам контейнера */
++    width: 100px;
++    height: 100px;
++    border-radius: 50%;
++    object-fit: cover;
+     margin-bottom: 15px;
+ }
+ 
+@@ -144,18 +147,152 @@
+     margin: 0;
+ }
+ 
+-.footer-link {
++/* Переключатель темы */
++.theme-toggle-wrapper {
++    display: flex;
++    align-items: center;
++    margin-left: 20px;
++}
++
++#theme-toggle {
++    background-color: transparent;
++    border: 1px solid #fff;
+     color: #fff;
+-    text-decoration: underline;
++    padding: 8px 16px;
++    cursor: pointer;
++    font-weight: bold;
++    border-radius: 20px;
++    transition: background-color 0.3s, color 0.3s;
++}
++
++#theme-toggle:hover {
++    background-color: #fff;
++    color: #333;
+ }
+-.drop-area {
+-    border: 2px dashed #007bff;
++
++body.light-theme {
++    background-color: #f4f4f4;
++    color: #000;
++}
++
++body.dark-theme {
++    background-color: #333;
++    color: #fff;
++}
++
++/* Темные стили */
++body.dark-theme figure figcaption {
++    color: #fff;
++}
++
++body.dark-theme blockquote.testimonial {
++    background-color: #444;
++    color: #fff;
++    padding: 15px;
++    border-radius: 5px;
++    font-style: italic;
++    margin: 20px 0;
++}
++
++body.dark-theme .client-testimonials {
++    background-color: #333;
+     padding: 20px;
+-    text-align: center;
++    border-radius: 8px;
++}
++
++body.dark-theme .testimonial-heading {
++    color: #fff;
++}
++
++body.dark-theme .testimonial-item {
++    background-color: #444;
++    padding: 15px;
+     margin-bottom: 15px;
+-    transition: background-color 0.3s;
++    border-radius: 5px;
++}
++
++body.dark-theme .testimonial-item p {
++    color: #fff;
++}
++
++/* Светлые стили */
++body.light-theme blockquote.testimonial {
++    background-color: transparent;
++    color: #333;
++    padding: 15px;
++    font-style: italic;
++    margin: 20px 0;
++}
++
++body.light-theme .client-testimonials,
++body.light-theme .testimonial-item {
++    background-color: transparent;
++    color: #333;
++}
++
++body.light-theme #theme-toggle {
++    color: #333;
++    background-color: #fff;
++    border-color: #ccc;
++}
++
++body.light-theme #theme-toggle:hover {
++    background-color: #f1f1f1;
++    border-color: #bbb;
++}
++
++body.dark-theme #theme-toggle {
++    color: #fff;
++    background-color: #333;
++    border-color: #444;
++}
++
++body.dark-theme #theme-toggle:hover {
++    background-color: #444;
++    border-color: #555;
++}
++
++/* Темный режим для формы */
++body.dark-theme #contactForm {
++    background-color: #444; /* Тёмный фон формы */
++    color: #fff; /* Белый текст */
++    border-radius: 10px;
++    padding: 20px;
++    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для выделения */
+ }
+ 
+-.drop-area.hover {
+-    background-color: #f0f8ff;
++/* Темный режим для элементов ввода */
++body.dark-theme #contactForm input,
++body.dark-theme #contactForm select,
++body.dark-theme #contactForm textarea {
++    background-color: #555; /* Тёмно-серый фон элементов */
++    color: #fff; /* Белый текст */
++    border: 1px solid #666; /* Граница элементов */
+ }
++
++body.dark-theme #contactForm input::placeholder,
++body.dark-theme #contactForm textarea::placeholder {
++    color: #bbb; /* Цвет текста placeholder */
++}
++
++/* При фокусе в тёмном режиме */
++body.dark-theme #contactForm input:focus,
++body.dark-theme #contactForm select:focus,
++body.dark-theme #contactForm textarea:focus {
++    background-color: #666; /* Светлее при фокусе */
++    border-color: #888; /* Изменение цвета границы */
++    outline: none;
++}
++
++/* Темный режим для кнопки */
++body.dark-theme #contactForm button {
++    background-color: #0066cc; /* Тёмно-синий фон кнопки */
++    color: #fff; /* Белый текст */
++    border: none;
++}
++
++body.dark-theme #contactForm button:hover {
++    background-color: #004c99; /* Ещё темнее при наведении */
++}
++
++
+Index: review.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Client Reviews - RoyalCo</title>\n  <link rel=\"stylesheet\" href=\"style/stylesreview.css\" />\n  <link href=\"node_modules/bootstrap/dist/css/bootstrap.min.css\" rel=\"stylesheet\" />\n  <link href=\"style/nav.css\" rel=\"stylesheet\" />\n</head>\n\n<body>\n<header>\n  <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">\n    <div class=\"container-fluid\">\n      <a class=\"navbar-brand\" href=\"index.html\">RoyalCo</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Переключатель навигации\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n        <div class=\"navbar-nav\">\n          <a class=\"nav-link\" href=\"destinations.html\">Destinations</a>\n          <a class=\"nav-link\" href=\"hottours.html\">Hot tours</a>\n          <a class=\"nav-link\" href=\"news.html\">News</a>\n          <a class=\"nav-link active\" href=\"review.html\">Reviews</a>\n          <a class=\"nav-link\" href=\"contact.html\">Contact us</a>\n          <a class=\"nav-link disabled\">Coming soon</a>\n        </div>\n      </div>\n    </div>\n  </nav>\n</header>\n\n<main class=\"container mt-4\">\n  <h2 class=\"text-center mb-4\">What Our Clients Say</h2>\n\n  <!-- Фильтр по оценкам -->\n  <div class=\"mb-4\">\n    <label for=\"ratingFilter\" class=\"form-label\">Filter by Rating:</label>\n    <select id=\"ratingFilter\" class=\"form-select\">\n      <option value=\"\">All</option>\n      <option value=\"5\">5 Stars</option>\n      <option value=\"4\">4 Stars</option>\n      <option value=\"3\">3 Stars</option>\n      <option value=\"2\">2 Stars</option>\n      <option value=\"1\">1 Star</option>\n    </select>\n  </div>\n\n  <section class=\"reviews-container\">\n    <div class=\"review-card\" data-rating=\"5\">\n      <div class=\"d-flex align-items-center mb-3\">\n        <img src=\"source/maria1.jpg\" alt=\"Maria K.\" class=\"review-photo\" style=\"width: 50px; height: 50px;\" />\n        <div>\n          <div class=\"review-name\">Maria K.</div>\n          <div class=\"review-date\">September 2024</div>\n        </div>\n      </div>\n      <h4 class=\"card-text\">\n        \"I had the best vacation ever thanks to RoyalCo! The beach tour\n        was a dream come true. I can't wait to book another tour!\"\n      </h4>\n      <div class=\"rating\">\n        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>\n      </div>\n    </div>\n\n    <div class=\"review-card\" data-rating=\"4\">\n      <div class=\"d-flex align-items-center mb-3\">\n        <img src=\"source/john.jpg\" alt=\"John S.\" class=\"review-photo\" style=\"width: 50px; height: 50px;\" />\n        <div>\n          <div class=\"review-name\">John S.</div>\n          <div class=\"review-date\">August 2024</div>\n        </div>\n      </div>\n      <h4 class=\"card-text\">\n        \"The mountain adventure was breathtaking! Every moment was filled\n        with excitement.\"\n      </h4>\n      <div class=\"rating\">\n        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>\n      </div>\n    </div>\n\n    <div class=\"review-card\" data-rating=\"3\">\n      <div class=\"d-flex align-items-center mb-3\">\n        <img src=\"source/emily.jpg\" alt=\"Emily T.\" class=\"review-photo\" style=\"width: 50px; height: 50px;\" />\n        <div>\n          <div class=\"review-name\">Emily T.</div>\n          <div class=\"review-date\">July 2024</div>\n        </div>\n      </div>\n      <h4 class=\"card-text\">\n        \"City exploration with RoyalCo exceeded not all my expectations.\"\n      </h4>\n      <div class=\"rating\">\n        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>\n      </div>\n    </div>\n\n    <div class=\"review-card\" data-rating=\"5\">\n      <div class=\"d-flex align-items-center mb-3\">\n        <img src=\"source/alex.jpg\" alt=\"Alex P.\" class=\"review-photo\" style=\"width: 50px; height: 50px;\" />\n        <div>\n          <div class=\"review-name\">Alex P.</div>\n          <div class=\"review-date\">June 2024</div>\n        </div>\n      </div>\n      <h4 class=\"card-text\">\n        \"RoyalCo is simply the best! From booking to the actual tour,\n        everything was seamless. Thank you for an unforgettable trip!\"\n      </h4>\n      <div class=\"rating\">\n        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>\n      </div>\n    </div>\n\n    <div class=\"review-card\" data-rating=\"5\">\n      <div class=\"d-flex align-items-center mb-3\">\n        <img src=\"source/samantha.jpg\" alt=\"Samantha L.\" class=\"review-photo\" style=\"width: 50px; height: 50px;\" />\n        <div>\n          <div class=\"review-name\">Samantha L.</div>\n          <div class=\"review-date\">May 2024</div>\n        </div>\n      </div>\n      <h4 class=\"card-text\">\n        \"My family and I had an amazing time on the RoyalCo city tour! The\n        guide was knowledgeable, and the service was top-notch. We will\n        definitely be back for another adventure!\"\n      </h4>\n      <div class=\"rating\">\n        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>\n      </div>\n    </div>\n\n    <div class=\"review-card\" data-rating=\"4\">\n      <div class=\"d-flex align-items-center mb-3\">\n        <img src=\"source/david.jpg\" alt=\"David R.\" class=\"review-photo\" style=\"width: 50px; height: 50px;\" />\n        <div>\n          <div class=\"review-name\">David R.</div>\n          <div class=\"review-date\">April 2024</div>\n        </div>\n      </div>\n      <h4 class=\"card-text\">\n        \"Best trip ever! The RoyalCo team organized everything perfectly.\n        Highly recommend for anyone looking for a stress-free vacation.\"\n      </h4>\n      <div class=\"rating\">\n        <i>&#9733;</i><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"form-container\">\n    <h2>Leave Your Review</h2>\n    <form id=\"reviewForm\" action=\"#\" method=\"post\">\n      <div class=\"mb-3\">\n        <label for=\"name\" class=\"form-label\">Your Name</label>\n        <input type=\"text\" class=\"form-control\" id=\"name\" name=\"name\" required />\n      </div>\n\n      <div class=\"mb-3\">\n        <label for=\"review\" class=\"form-label\">Your Review</label>\n        <textarea class=\"form-control\" id=\"review\" name=\"review\" rows=\"5\" required></textarea>\n      </div>\n\n      <div class=\"mb-3\">\n        <label for=\"rating\" class=\"form-label\">Your Rating</label>\n        <select class=\"form-select\" id=\"rating\" name=\"rating\" required>\n          <option value=\"\" disabled selected>Choose rating</option>\n          <option value=\"5\">5 Stars</option>\n          <option value=\"4\">4 Stars</option>\n          <option value=\"3\">3 Stars</option>\n          <option value=\"2\">2 Stars</option>\n          <option value=\"1\">1 Star</option>\n        </select>\n      </div>\n\n      <button type=\"submit\" class=\"btn btn-primary\">Submit Review</button>\n    </form>\n  </section>\n</main>\n\n<footer class=\"text-center mt-4\">\n  <p style=\"margin: 0\">Created by Erik A., Alana M., Aruzhan A. - September 2024</p>\n  <p style=\"margin: 5px 0\">Contact us at: <a href=\"mailto:info@touragency.com\" style=\"color: #fff; text-decoration: underline\">info@touragency.com</a></p>\n</footer>\n<script src=\"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\"></script>\n<script src=\"script/scriptreview.js\"></script>\n<script>\n  // Функция для фильтрации отзывов\n  document.getElementById('ratingFilter').addEventListener('change', function() {\n    const selectedRating = this.value;\n    const reviews = document.querySelectorAll('.review-card');\n\n    reviews.forEach(review => {\n      const reviewRating = review.getAttribute('data-rating');\n      if (selectedRating === \"\" || reviewRating === selectedRating) {\n        review.style.display = \"block\"; // Показываем отзыв\n      } else {\n        review.style.display = \"none\"; // Скрываем отзыв\n      }\n    });\n\n    // Сохраняем выбранный рейтинг в локальном хранилище\n    localStorage.setItem('selectedRating', selectedRating);\n  });\n\n  // Применяем сохранённый фильтр при загрузке страницы\n  window.onload = function() {\n    const savedRating = localStorage.getItem('selectedRating');\n    if (savedRating) {\n      document.getElementById('ratingFilter').value = savedRating;\n      document.getElementById('ratingFilter').dispatchEvent(new Event('change'));\n    }\n  };\n</script>\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/review.html b/review.html
+--- a/review.html	
++++ b/review.html	
+@@ -27,6 +27,11 @@
+           <a class="nav-link disabled">Coming soon</a>
+         </div>
+       </div>
++      <div class="theme-toggle-wrapper">
++        <button id="theme-toggle" class="btn btn-outline-light">🌙 Dark Mode</button>
++      </div>
++    </div>
++  </nav>
+     </div>
+   </nav>
+ </header>
+Index: script/scriptcontact.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>document.getElementById(\"contactForm\").addEventListener(\"submit\", function(event) {\n    event.preventDefault();\n\n    let name = document.getElementById(\"name\").value.trim();\n    let email = document.getElementById(\"email\").value.trim();\n    let message = document.getElementById(\"message\").value.trim();\n    let errors = [];\n\n    // Проверка обязательных полей\n    if (!name) {\n        errors.push(\"Name is required.\");\n    }\n    if (!email) {\n        errors.push(\"Email is required.\");\n    } else if (!validateEmail(email)) {\n        errors.push(\"Please enter a valid email address.\");\n    }\n    if (!message) {\n        errors.push(\"Message is required.\");\n    }\n\n    // Если есть ошибки, выводим их\n    if (errors.length > 0) {\n        alert(errors.join(\"\\n\"));\n    } else {\n        alert(\"Thank you! Your message has been sent.\");\n        playSound();  // Воспроизвести звук\n        this.reset(); // Очищаем форму\n        dropArea.textContent = \"Перетащите файл сюда\"; // Сбрасываем текст в области перетаскивания\n        imageUpload.value = ''; // Удаляем файл из input\n    }\n});\n\n// Функция для валидации электронной почты\nfunction validateEmail(email) {\n    const regex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    return regex.test(email);\n}\n\nfunction playSound() {\n    const audio = new Audio('source/click.wav'); // Укажите путь, если необходимо\n    audio.play();\n}\n\nfunction changeBackgroundColor() {\n    document.body.style.backgroundColor =\n        document.body.style.backgroundColor === \"lightpink\" ? \"white\" : \"lightpink\";\n    playBackgroundChangeSound();\n}\n\nfunction playBackgroundChangeSound() {\n    const audio = new Audio('source/background.wav'); // Укажите путь, если необходимо\n    audio.play();\n}\n\nfunction updateTime() {\n    const now = new Date();\n    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };\n    document.getElementById(\"currentDateTime\").innerText = now.toLocaleDateString('en-US', options);\n}\n\nsetInterval(updateTime, 1000);\nupdateTime(); // Начальный вызов\n\nconst dropArea = document.getElementById('dropArea');\nconst imageUpload = document.getElementById('imageUpload');\n\ndropArea.addEventListener('dragover', (event) => {\n    event.preventDefault();\n    dropArea.classList.add('hover');\n});\n\ndropArea.addEventListener('dragleave', () => {\n    dropArea.classList.remove('hover');\n});\n\ndropArea.addEventListener('drop', (event) => {\n    event.preventDefault();\n    dropArea.classList.remove('hover');\n\n    const files = event.dataTransfer.files;\n    if (files.length > 0) {\n        imageUpload.files = files; // Устанавливаем файлы в input\n        dropArea.textContent = files[0].name; // Отображаем имя файла\n    }\n});\n\nimageUpload.addEventListener('change', (event) => {\n    const file = event.target.files[0];\n    if (file) {\n        dropArea.textContent = file.name; // Отображаем имя файла\n    }\n});\n\n// Открытие диалога выбора файла при клике на область\ndocument.getElementById('uploadText').addEventListener('click', () => {\n    imageUpload.click(); // Симулируем клик на input\n});\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/script/scriptcontact.js b/script/scriptcontact.js
+--- a/script/scriptcontact.js	
++++ b/script/scriptcontact.js	
+@@ -26,8 +26,6 @@
+         alert("Thank you! Your message has been sent.");
+         playSound();  // Воспроизвести звук
+         this.reset(); // Очищаем форму
+-        dropArea.textContent = "Перетащите файл сюда"; // Сбрасываем текст в области перетаскивания
+-        imageUpload.value = ''; // Удаляем файл из input
+     }
+ });
+ 
+@@ -62,37 +60,50 @@
+ setInterval(updateTime, 1000);
+ updateTime(); // Начальный вызов
+ 
+-const dropArea = document.getElementById('dropArea');
+-const imageUpload = document.getElementById('imageUpload');
+ 
+-dropArea.addEventListener('dragover', (event) => {
+-    event.preventDefault();
+-    dropArea.classList.add('hover');
+-});
++document.addEventListener("DOMContentLoaded", function () {
++    const themeToggleButton = document.getElementById("theme-toggle");
+ 
+-dropArea.addEventListener('dragleave', () => {
+-    dropArea.classList.remove('hover');
+-});
++    // Проверим, существует ли кнопка
++    if (!themeToggleButton) {
++        console.error('Кнопка переключения темы не найдена!');
++        return;
++    }
+ 
+-dropArea.addEventListener('drop', (event) => {
+-    event.preventDefault();
+-    dropArea.classList.remove('hover');
++    // Проверим, есть ли сохраненная тема в localStorage
++    const savedTheme = localStorage.getItem("theme");
+ 
+-    const files = event.dataTransfer.files;
+-    if (files.length > 0) {
+-        imageUpload.files = files; // Устанавливаем файлы в input
+-        dropArea.textContent = files[0].name; // Отображаем имя файла
++    // Если тема сохранена, применим её, иначе по умолчанию будет светлая тема
++    if (savedTheme) {
++        document.body.classList.add(savedTheme);
++    } else {
++        document.body.classList.add("light-theme");
+     }
+-});
+ 
+-imageUpload.addEventListener('change', (event) => {
+-    const file = event.target.files[0];
+-    if (file) {
+-        dropArea.textContent = file.name; // Отображаем имя файла
++    // Функция для обновления текста кнопки в зависимости от темы
++    function updateButtonText() {
++        if (document.body.classList.contains("dark-theme")) {
++            themeToggleButton.textContent = "🌞 Light Mode"; // Когда темная тема — показываем "🌞 Light Mode"
++        } else {
++            themeToggleButton.textContent = "🌙 Dark Mode"; // Когда светлая тема — показываем "🌙 Dark Mode"
++        }
+     }
+-});
+-
+-// Открытие диалога выбора файла при клике на область
+-document.getElementById('uploadText').addEventListener('click', () => {
+-    imageUpload.click(); // Симулируем клик на input
++
++    // Обновляем текст кнопки при загрузке страницы
++    updateButtonText();
++
++    // Добавляем обработчик события для переключения темы
++    themeToggleButton.addEventListener("click", function () {
++        // Переключаем классы для светлой и темной темы
++        document.body.classList.toggle("dark-theme");
++        document.body.classList.toggle("light-theme");
++
++        // Сохраняем выбранную тему в localStorage
++        const currentTheme = document.body.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
++        localStorage.setItem("theme", currentTheme);
++
++        // Обновляем текст кнопки после переключения темы
++        updateButtonText();
++    });
+ });
++
+Index: script/scriptreview.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>let lowRatingAudio;\ndocument.getElementById(\"reviewForm\").addEventListener(\"submit\", function(event) {\n    event.preventDefault();\n\n    if (lowRatingAudio) {\n        lowRatingAudio.pause();\n        lowRatingAudio.currentTime = 0;  // Сбрасываем звук в начало\n    }\n\n    let name = document.getElementById(\"name\").value.trim();\n    let review = document.getElementById(\"review\").value.trim();\n    let rating = document.getElementById(\"rating\").value;\n\n\n    if (!name || !review || !rating) {\n        alert(\"Please,fill out all fields.\");\n    } else {\n        alert(\"Thank you! Your message has been sent.\");\n        this.reset();\n    }\n});\ndocument.getElementById(\"rating\").addEventListener(\"change\", function() {\n    if (this.value === \"1\") {\n        playLowRatingSound();\n    }\n});\n\nfunction playLowRatingSound() {\n    const audio = new Audio('source/sadmeoww.mp3');  // Adjust the path if needed\n    audio.play();\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/script/scriptreview.js b/script/scriptreview.js
+--- a/script/scriptreview.js	
++++ b/script/scriptreview.js	
+@@ -28,4 +28,50 @@
+ function playLowRatingSound() {
+     const audio = new Audio('source/sadmeoww.mp3');  // Adjust the path if needed
+     audio.play();
+-}
+\ No newline at end of file
++}
++
++document.addEventListener("DOMContentLoaded", function () {
++    const themeToggleButton = document.getElementById("theme-toggle");
++
++    // Проверим, существует ли кнопка
++    if (!themeToggleButton) {
++        console.error('Кнопка переключения темы не найдена!');
++        return;
++    }
++
++    // Проверим, есть ли сохраненная тема в localStorage
++    const savedTheme = localStorage.getItem("theme");
++
++    // Если тема сохранена, применим её, иначе по умолчанию будет светлая тема
++    if (savedTheme) {
++        document.body.classList.add(savedTheme);
++    } else {
++        document.body.classList.add("light-theme");
++    }
++
++    // Функция для обновления текста кнопки в зависимости от темы
++    function updateButtonText() {
++        if (document.body.classList.contains("dark-theme")) {
++            themeToggleButton.textContent = "🌞 Light Mode"; // Когда темная тема — показываем "🌞 Light Mode"
++        } else {
++            themeToggleButton.textContent = "🌙 Dark Mode"; // Когда светлая тема — показываем "🌙 Dark Mode"
++        }
++    }
++
++    // Обновляем текст кнопки при загрузке страницы
++    updateButtonText();
++
++    // Добавляем обработчик события для переключения темы
++    themeToggleButton.addEventListener("click", function () {
++        // Переключаем классы для светлой и темной темы
++        document.body.classList.toggle("dark-theme");
++        document.body.classList.toggle("light-theme");
++
++        // Сохраняем выбранную тему в localStorage
++        const currentTheme = document.body.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
++        localStorage.setItem("theme", currentTheme);
++
++        // Обновляем текст кнопки после переключения темы
++        updateButtonText();
++    });
++});
+Index: contact.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Contact Us - Tour Agency</title>\n  <link rel=\"stylesheet\" href=\"style/stylescontact.css\" />\n  <link href=\"node_modules/bootstrap/dist/css/bootstrap.min.css\" rel=\"stylesheet\" />\n  <link href=\"style/nav.css\" rel=\"stylesheet\" />\n</head>\n\n<body>\n<header>\n  <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">\n    <div class=\"container-fluid\">\n      <a class=\"navbar-brand\" href=\"index.html\">RoyalCo</a>\n      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n      <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n        <div class=\"navbar-nav\">\n          <a class=\"nav-link\" href=\"destinations.html\">Destinations</a>\n          <a class=\"nav-link\" href=\"hottours.html\">Hot tours</a>\n          <a class=\"nav-link\" href=\"news.html\">News</a>\n          <a class=\"nav-link\" href=\"review.html\">Reviews</a>\n          <a class=\"nav-link active\" href=\"contact.html\">Contact us</a>\n          <a class=\"nav-link disabled\">Coming soon</a>\n        </div>\n      </div>\n    </div>\n  </nav>\n</header>\n\n<main>\n  <section id=\"contact\">\n    <h2>Contact Us</h2>\n    <p>If you have any questions or would like to book a tour, feel free to contact us using the form below.</p>\n\n\n    <figure>\n      <img src=\"source/tourimage.jpg\" alt=\"Beautiful landscape of a tour destination\" />\n      <figcaption>Explore stunning landscapes with our tours!</figcaption>\n    </figure>\n\n    <form id=\"contactForm\" action=\"#\" method=\"post\">\n      <div class=\"mb-3\">\n        <label for=\"name\" class=\"form-label\">Name:</label>\n        <input type=\"text\" id=\"name\" name=\"name\" class=\"form-control\"  />\n      </div>\n\n      <div class=\"mb-3\">\n        <label for=\"email\" class=\"form-label\">Email:</label>\n        <input id=\"email\" name=\"email\" class=\"form-control\" />\n      </div>\n\n      <div class=\"mb-3\">\n        <label for=\"tour\" class=\"form-label\">Select a Tour:</label>\n        <select id=\"tour\" name=\"tour\" class=\"form-select\">\n          <option value=\"beach\">Beach Tour</option>\n          <option value=\"mountain\">Mountain Adventure</option>\n          <option value=\"city\">City Exploration</option>\n        </select>\n      </div>\n\n      <div class=\"mb-3\">\n        <label for=\"message\" class=\"form-label\">Message:</label>\n        <textarea id=\"message\" name=\"message\" class=\"form-control\" rows=\"4\"></textarea>\n      </div>\n\n      <div class=\"mb-3\">\n        <div id=\"dropArea\" class=\"drop-area\">\n          <span id=\"uploadText\" style=\"color: blue; text-decoration: underline; cursor: pointer;\">Choose file</span>\n          <input type=\"file\" id=\"imageUpload\" name=\"image\" accept=\"image/*\" style=\"display: none;\" />\n        </div>\n      </div>\n\n      <button type=\"submit\" class=\"btn btn-primary\">Send Message</button>\n    </form>\n  </section>\n\n  <blockquote class=\"testimonial\">\n    \"Travel is the only thing you buy that makes you richer.\"\n  </blockquote>\n\n  <section class=\"client-testimonials\">\n    <h2 class=\"testimonial-heading\">What Our Clients Say</h2>\n\n    <div class=\"testimonial-container\">\n      <div class=\"testimonial-item\">\n        <img src=\"source/maria1.jpg\" alt=\"Client photo\" class=\"client-photo\" />\n        <p class=\"client-quote\">\n          \"I had the best vacation ever thanks to RoyalCo! The beach tour was a dream come true!\"\n        </p>\n        <p class=\"client-name\"><strong>- Maria K.</strong></p>\n      </div>\n\n      <div class=\"testimonial-item\">\n        <img src=\"source/john.jpg\" alt=\"Client photo\" class=\"client-photo\" />\n        <p class=\"client-quote\">\n          \"The mountain adventure was breathtaking! I would recommend this to everyone!\"\n        </p>\n        <p class=\"client-name\"><strong>- John S.</strong></p>\n      </div>\n\n      <div class=\"testimonial-item\">\n        <img src=\"source/emily.jpg\" alt=\"Client photo\" class=\"client-photo\" />\n        <p class=\"client-quote\">\n          \"City exploration was unforgettable! RoyalCo exceeded my expectations.\"\n        </p>\n        <p class=\"client-name\"><strong>- Emily T.</strong></p>\n      </div>\n    </div>\n  </section>\n\n\n  <button class=\"btn btn-primary mt-3\" onclick=\"changeBackgroundColor()\">\n    Change Background Color\n  </button>\n</main>\n\n\n<footer>\n  <p id=\"currentDateTime\"></p>\n  <p>Created by Erik A., Alana M., Aruzhan A. - September 2024</p>\n  <p>Contact us at: <a href=\"mailto:info@touragency.com\" class=\"footer-link\">info@touragency.com</a></p>\n</footer>\n\n<script src=\"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\"></script>\n<script src=\"script/scriptcontact.js\"></script>\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/contact.html b/contact.html
+--- a/contact.html	
++++ b/contact.html	
+@@ -27,6 +27,10 @@
+           <a class="nav-link disabled">Coming soon</a>
+         </div>
+       </div>
++      <!-- Theme Toggle Button -->
++      <div class="theme-toggle-wrapper">
++        <button id="theme-toggle" class="btn btn-outline-light">🌙 Dark Mode</button>
++      </div>
+     </div>
+   </nav>
+ </header>
+@@ -66,13 +70,6 @@
+         <label for="message" class="form-label">Message:</label>
+         <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+       </div>
+-
+-      <div class="mb-3">
+-        <div id="dropArea" class="drop-area">
+-          <span id="uploadText" style="color: blue; text-decoration: underline; cursor: pointer;">Choose file</span>
+-          <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;" />
+-        </div>
+-      </div>
+ 
+       <button type="submit" class="btn btn-primary">Send Message</button>
+     </form>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"73701e39-9c97-4927-9d6a-5d84710b98ad\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 2\n}</component>\n  <component name=\"ProjectId\" id=\"2nU7K7lGFUrnpsgtCqBdoBnlmNf\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/alanamukanova/tour_agency/source&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/source\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/script\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\n      <module name=\"tour_agency\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\n      <module name=\"tour_agency\" />\n      <option name=\"filePath\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"jdk-21.0.1-openjdk-21.0.1-3183f394aec4-abbd5a8d\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"73701e39-9c97-4927-9d6a-5d84710b98ad\" name=\"Changes\" comment=\"\" />\n      <created>1729015733469</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1729015733469</updated>\n      <workItem from=\"1729015734479\" duration=\"4054000\" />\n      <workItem from=\"1729085657097\" duration=\"579000\" />\n      <workItem from=\"1729103956513\" duration=\"4998000\" />\n      <workItem from=\"1729245497326\" duration=\"728000\" />\n      <workItem from=\"1729246391497\" duration=\"25000\" />\n      <workItem from=\"1729246982084\" duration=\"610000\" />\n      <workItem from=\"1729764141955\" duration=\"1644000\" />\n      <workItem from=\"1730228498620\" duration=\"3728000\" />\n      <workItem from=\"1730232597550\" duration=\"13000\" />\n      <workItem from=\"1730232612731\" duration=\"488000\" />\n      <workItem from=\"1730233176452\" duration=\"1317000\" />\n      <workItem from=\"1730307563198\" duration=\"1712000\" />\n      <workItem from=\"1730363274674\" duration=\"74000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,7 +4,15 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="73701e39-9c97-4927-9d6a-5d84710b98ad" name="Changes" comment="" />
++    <list default="true" id="73701e39-9c97-4927-9d6a-5d84710b98ad" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/review.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/script/scriptcontact.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/scriptcontact.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/script/scriptreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/scriptreview.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/style/stylescontact.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/stylescontact.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/style/stylesreview.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/stylesreview.css" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -97,6 +105,10 @@
+       <workItem from="1730233176452" duration="1317000" />
+       <workItem from="1730307563198" duration="1712000" />
+       <workItem from="1730363274674" duration="74000" />
++      <workItem from="1730363521485" duration="4035000" />
++      <workItem from="1730376830551" duration="1292000" />
++      <workItem from="1731748163302" duration="419000" />
++      <workItem from="1731929969253" duration="7811000" />
+     </task>
+     <servers />
+   </component>

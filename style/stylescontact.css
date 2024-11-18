@@ -1,11 +1,14 @@
+/* Базовые стили для body */
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
     color: #000;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
 }
 
+/* Стили для заголовков и текста */
 h1 {
     font-size: 2.5em;
     margin: 0;
@@ -17,6 +20,7 @@ h1 {
     margin-top: 10px;
 }
 
+/* Основные стили */
 main {
     padding: 20px;
 }
@@ -36,11 +40,11 @@ figcaption {
     color: #333;
 }
 
-/* Adjusting form to fit Bootstrap styling */
+/* Стили для формы */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 600px; /* Increased max-width for larger screens */
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -53,9 +57,8 @@ select,
 textarea {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ced4da; /* Bootstrap border color */
-    border-radius: 0.25rem; /* Bootstrap border radius */
-    box-shadow: none; /* Remove default box-shadow */
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
 }
 
 button {
@@ -66,13 +69,13 @@ button {
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer; /* Change cursor to pointer */
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #e65c00;
-    transform: scale(1.05); /* Slightly increased scale for hover effect */
+    transform: scale(1.05);
 }
 
 footer {
@@ -83,7 +86,7 @@ footer {
     margin-top: 30px;
 }
 
-/* Additional styles for testimonials */
+/* Стили для отзывов */
 .testimonial {
     font-style: italic;
     background-color: #f0f0f0;
@@ -96,8 +99,8 @@ footer {
     background-color: #f8f8f8;
     padding: 30px;
     text-align: center;
-    width: 100%; /* Full width of the screen */
-    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%;
+    box-sizing: border-box;
     margin-top: 20px;
 }
 
@@ -108,31 +111,31 @@ footer {
 
 .testimonial-container {
     display: flex;
-    justify-content: center; /* Center testimonials in container */
+    justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .testimonial-item {
     max-width: 300px;
-    width: 100%; /* Ensure full width in flex container */
+    width: 100%;
     margin: 15px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem; /* Rounded corners */
-    transition: transform 0.3s ease; /* Smooth transform effect */
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
 }
 
 .testimonial-item:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
+    transform: scale(1.05);
 }
 
 .client-photo {
-    width: 100px; /* Задайте фиксированную ширину */
-    height: 100px; /* Задайте фиксированную высоту */
-    border-radius: 50%; /* Делает изображение круглым */
-    object-fit: cover; /* Обрезает изображение, чтобы оно соответствовало размерам контейнера */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 15px;
 }
 
@@ -144,18 +147,152 @@ footer {
     margin: 0;
 }
 
-.footer-link {
-    color: #fff;
-    text-decoration: underline;
-}
-.drop-area {
-    border: 2px dashed #007bff;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 15px;
-    transition: background-color 0.3s;
+/* Переключатель темы */
+.theme-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
 }
 
-.drop-area.hover {
-    background-color: #f0f8ff;
+#theme-toggle {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+#theme-toggle:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Темные стили */
+body.dark-theme figure figcaption {
+    color: #fff;
+}
+
+body.dark-theme blockquote.testimonial {
+    background-color: #444;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+body.dark-theme .client-testimonials {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+body.dark-theme .testimonial-heading {
+    color: #fff;
+}
+
+body.dark-theme .testimonial-item {
+    background-color: #444;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+body.dark-theme .testimonial-item p {
+    color: #fff;
+}
+
+/* Светлые стили */
+body.light-theme blockquote.testimonial {
+    background-color: transparent;
+    color: #333;
+    padding: 15px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+body.light-theme .client-testimonials,
+body.light-theme .testimonial-item {
+    background-color: transparent;
+    color: #333;
+}
+
+body.light-theme #theme-toggle {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+body.light-theme #theme-toggle:hover {
+    background-color: #f1f1f1;
+    border-color: #bbb;
+}
+
+body.dark-theme #theme-toggle {
+    color: #fff;
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-theme #theme-toggle:hover {
+    background-color: #444;
+    border-color: #555;
+}
+
+/* Темный режим для формы */
+body.dark-theme #contactForm {
+    background-color: #444; /* Тёмный фон формы */
+    color: #fff; /* Белый текст */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для выделения */
+}
+
+/* Темный режим для элементов ввода */
+body.dark-theme #contactForm input,
+body.dark-theme #contactForm select,
+body.dark-theme #contactForm textarea {
+    background-color: #555; /* Тёмно-серый фон элементов */
+    color: #fff; /* Белый текст */
+    border: 1px solid #666; /* Граница элементов */
+}
+
+body.dark-theme #contactForm input::placeholder,
+body.dark-theme #contactForm textarea::placeholder {
+    color: #bbb; /* Цвет текста placeholder */
+}
+
+/* При фокусе в тёмном режиме */
+body.dark-theme #contactForm input:focus,
+body.dark-theme #contactForm select:focus,
+body.dark-theme #contactForm textarea:focus {
+    background-color: #666; /* Светлее при фокусе */
+    border-color: #888; /* Изменение цвета границы */
+    outline: none;
+}
+
+/* Темный режим для кнопки */
+body.dark-theme #contactForm button {
+    background-color: #0066cc; /* Тёмно-синий фон кнопки */
+    color: #fff; /* Белый текст */
+    border: none;
+}
+
+body.dark-theme #contactForm button:hover {
+    background-color: #004c99; /* Ещё темнее при наведении */
+}
+
+

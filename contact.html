@@ -27,6 +27,10 @@
           <a class="nav-link" id="profileLink" href="index.html">Login</a>
         </div>
       </div>
+      <!-- Theme Toggle Button -->
+      <div class="theme-toggle-wrapper">
+        <button id="theme-toggle" class="btn btn-outline-light">🌙 Dark Mode</button>
+      </div>
     </div>
   </nav>
 </header>
@@ -65,13 +69,6 @@
       <div class="mb-3">
         <label for="message" class="form-label">Message:</label>
         <textarea id="message" name="message" class="form-control" rows="4"></textarea>
-      </div>
-
-      <div class="mb-3">
-        <div id="dropArea" class="drop-area">
-          <span id="uploadText" style="color: blue; text-decoration: underline; cursor: pointer;">Choose file</span>
-          <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;" />
-        </div>
       </div>
 
       <button type="submit" class="btn btn-primary">Send Message</button>

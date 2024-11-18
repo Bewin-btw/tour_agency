@@ -26,8 +26,6 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         alert("Thank you! Your message has been sent.");
         playSound();  // Воспроизвести звук
         this.reset(); // Очищаем форму
-        dropArea.textContent = "Перетащите файл сюда"; // Сбрасываем текст в области перетаскивания
-        imageUpload.value = ''; // Удаляем файл из input
     }
 });
 
@@ -62,37 +60,50 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime(); // Начальный вызов
 
-const dropArea = document.getElementById('dropArea');
-const imageUpload = document.getElementById('imageUpload');
 
-dropArea.addEventListener('dragover', (event) => {
-    event.preventDefault();
-    dropArea.classList.add('hover');
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const themeToggleButton = document.getElementById("theme-toggle");
 
-dropArea.addEventListener('dragleave', () => {
-    dropArea.classList.remove('hover');
-});
-
-dropArea.addEventListener('drop', (event) => {
-    event.preventDefault();
-    dropArea.classList.remove('hover');
-
-    const files = event.dataTransfer.files;
-    if (files.length > 0) {
-        imageUpload.files = files; // Устанавливаем файлы в input
-        dropArea.textContent = files[0].name; // Отображаем имя файла
+    // Проверим, существует ли кнопка
+    if (!themeToggleButton) {
+        console.error('Кнопка переключения темы не найдена!');
+        return;
     }
-});
 
-imageUpload.addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        dropArea.textContent = file.name; // Отображаем имя файла
+    // Проверим, есть ли сохраненная тема в localStorage
+    const savedTheme = localStorage.getItem("theme");
+
+    // Если тема сохранена, применим её, иначе по умолчанию будет светлая тема
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+    } else {
+        document.body.classList.add("light-theme");
     }
+
+    // Функция для обновления текста кнопки в зависимости от темы
+    function updateButtonText() {
+        if (document.body.classList.contains("dark-theme")) {
+            themeToggleButton.textContent = "🌞 Light Mode"; // Когда темная тема — показываем "🌞 Light Mode"
+        } else {
+            themeToggleButton.textContent = "🌙 Dark Mode"; // Когда светлая тема — показываем "🌙 Dark Mode"
+        }
+    }
+
+    // Обновляем текст кнопки при загрузке страницы
+    updateButtonText();
+
+    // Добавляем обработчик события для переключения темы
+    themeToggleButton.addEventListener("click", function () {
+        // Переключаем классы для светлой и темной темы
+        document.body.classList.toggle("dark-theme");
+        document.body.classList.toggle("light-theme");
+
+        // Сохраняем выбранную тему в localStorage
+        const currentTheme = document.body.classList.contains("dark-theme") ? "dark-theme" : "light-theme";
+        localStorage.setItem("theme", currentTheme);
+
+        // Обновляем текст кнопки после переключения темы
+        updateButtonText();
+    });
 });
 
-// Открытие диалога выбора файла при клике на область
-document.getElementById('uploadText').addEventListener('click', () => {
-    imageUpload.click(); // Симулируем клик на input
-});
