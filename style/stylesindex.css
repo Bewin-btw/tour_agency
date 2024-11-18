@@ -236,28 +236,6 @@ blockquote {
   border-color: #0056b3;
 }
 
-.left-side {
-  display: flex;
-  flex-direction: column; /* Устанавливает вертикальное расположение элементов */
-  align-items: center; /* Центрирует содержимое по горизонтали */
-  justify-content: center; /* Центрирует содержимое по вертикали */
-  text-align: center; /* Центрирует текст */
-  padding: 20px;
-  background-color: #f8f9fa; /* Добавить легкий фон, если требуется */
-}
-
-.left-side h1 {
-  margin-bottom: 20px; /* Отступ между заголовком и логотипом */
-  font-size: 2rem;
-  color: #333;
-}
-
-#logo {
-  max-width: 100%; /* Подстраивает логотип под размеры контейнера */
-  height: auto;
-  max-height: 150px; /* Ограничение по высоте */
-  border-radius: 10px; /* Сглаженные углы, если требуется */
-}
 
 
 footer {
