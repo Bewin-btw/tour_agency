@@ -36,23 +36,17 @@
   </header>
 
   <main>
-    <section id="utilities">
-      <div class="utilities">
-        <div id="currentDateTime" class="mt-3"></div>
-      </div>
-    </section>
-
-    
-
-
-
-    <section id="intro">
-      <h2>Choose Your Dream Vacation</h2>
+    <section id="about">
+      <h2>Welcome to RoyalCo Tour Agency</h2>
+      <img id="logo" src="source/agency.jpg" alt="RoyalCo Agency">
       <p>
-        Discover breathtaking destinations and tailor-made tours to suit your
-        needs. Whether you're looking for relaxation, adventure, or cultural
-        immersion, we have something for everyone.
+        At RoyalCo Tour Agency, we specialize in creating unforgettable travel experiences tailored to your needs.
+        With over a decade of expertise in the travel industry, we pride ourselves on providing top-notch service,
+        unbeatable destinations, and memories that last a lifetime.
       </p>
+      <blockquote>
+        "Every journey begins with a single step, but the memories last a lifetime. Let RoyalCo guide you to moments worth living for."
+      </blockquote>
     </section>
 
     <section id="tour-examples">
@@ -113,117 +107,57 @@
       </div>
     </section>
 
-    <section id="FAQ">
-      <div class="accordion" id="faqAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              What is the best time to book a tour?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              The best time to book a tour is usually during off-peak seasons to get the best deals.
-            </div>
-          </div>
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <p>Explore exciting events happening near your favorite destinations!</p>
+    
+      <!-- Форма для ввода города -->
+      <form id="city-form" class="mb-4">
+        <div class="input-group">
+          <input type="text" id="city-input" class="form-control" placeholder="Enter a city (e.g., Paris)" required>
+          <button type="submit" class="btn btn-primary">Find Events</button>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Are the tours customizable?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Yes, our tours are fully customizable to meet your preferences and needs.
-            </div>
-          </div>
-        </div>
+      </form>
+    
+      <!-- Контейнер для событий -->
+      <div id="events-container" class="row">
+        <!-- События будут добавлены динамически -->
       </div>
     </section>
+    
+    
 
-    <section id="subscription">
-      <div id="subscriptionPopup" class="modal fade" tabindex="-1" aria-labelledby="subscriptionPopupLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="subscriptionPopupLabel">Subscribe to Our Tours</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form id="subscriptionForm">
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="email" required />
-                </div>
-                <button type="submit" class="btn btn-secondary">Subscribe</button>
-              </form>
-            </div>
-          </div>
+    <section id="team">
+      <h2>Meet Our Team</h2>
+      <div class="row">
+        <div class="col-md-4 team-member">
+          <!-- <img src="source/team1.jpg" alt="Team Member 1"> -->
+          <h3>Erik Aktaev</h3>
+          <p>Founder & CEO</p>
+        </div>
+        <div class="col-md-4 team-member">
+          <!-- <img src="source/team2.jpg" alt="Team Member 2"> -->
+          <h3>Aruzhan Amanbekova</h3>
+          <p>Travel Specialist</p>
+        </div>
+        <div class="col-md-4 team-member">
+          <!-- <img src="source/team3.jpg" alt="Team Member 3"> -->
+          <h3>Alana Mukanova</h3>
+          <p>Customer Support Manager</p>
         </div>
       </div>
-      <button type="button" class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#subscriptionPopup">
-        Subscribe to Tours
-      </button>
-    </section>
-
-    <section id="about">
-      <h2>About Our Agency</h2>
-      <p>
-        We have been crafting unforgettable travel experiences for over a
-        decade. Our team is dedicated to providing personalized service and
-        ensuring that every trip is an adventure of a lifetime.
-      </p>
-      <blockquote>
-        "Travel is the only thing you buy that makes you richer." - Anonymous
-      </blockquote>
     </section>
 
     <section id="contact">
       <h2>Contact Us</h2>
+      <p>We'd love to hear from you! Reach out to us through any of the following platforms:</p>
       <ul>
-        <li><a href="">Whatsapp</a></li>
-        <li><a href="">Instagram</a></li>
-        <li><a href="">Telegram</a></li>
+        <li><a href="https://wa.me/87778378011" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
+        <li><a href="https://instagram.com/erikaktaev" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://t.me/bewin_btw" target="_blank" rel="noopener noreferrer">Telegram</a></li>
       </ul>
-
-      <h2>Or send a form:</h2>
-      <form action="/submit" id="cform">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required /><br /><br />
-        <label for="tour">Tour type:</label>
-        <select id="tour" name="tour">
-          <option value="beach">Beach Getaway</option>
-          <option value="city">City Adventure</option>
-          <option value="mountain">Mountain Hike</option>
-        </select>
-        <dl id="tour-types-description">
-          <dt>Beach Getaway:</dt>
-          <dd>Relaxing, scenic views, sun, sand, ocean breeze.</dd>
-
-          <dt>City Adventure:</dt>
-          <dd>
-            Explore culture, architecture, museums, restaurants, nightlife.
-          </dd>
-
-          <dt>Mountain Hike:</dt>
-          <dd>Nature, fresh air, exercise, peaceful, scenic landscapes.</dd>
-        </dl>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
-
-        <label for="message">Message:</label><br />
-        <textarea id="message" name="message" rows="5" cols="30"></textarea><br /><br />
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
     </section>
+    
   </main>
 
   <footer>
@@ -239,3 +173,4 @@
 
 <script src="script/popup_scripts.js"></script>
 <script src="./script/login.js"></script>
+<script src="./script/events.js"></script>

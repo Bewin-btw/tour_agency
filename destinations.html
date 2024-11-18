@@ -17,7 +17,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="royalco.html">RoyalCo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -29,20 +29,28 @@
             <a class="nav-link" href="contact.html">Contact us</a>
             <a class="nav-link" id="profileLink" href="index.html">Login</a>
           </div>
+          <div class="theme-switch-wrapper ms-auto">
+            <label class="theme-switch" for="theme-switcher">
+              <input type="checkbox" id="theme-switcher">
+              <div class="slider round"></div>
+            </label>
+            <span class="text-light ms-2">Toggle Theme</span>
+          </div>
         </div>
       </div>
     </nav>
   </header>
+  
 
   <main>
     <section id="utilities">
-      <div class="theme-switch-wrapper">
+      <!-- <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-switcher">
           <input type="checkbox" id="theme-switcher">
           <div class="slider round"></div>
         </label>
         <span>Toggle Theme</span>
-      </div>
+      </div> -->
 
       <!-- <div id="time-section">
         <button id="time-button" class="btn">Show Current Time</button>
@@ -51,7 +59,7 @@
       </div> -->
       
 
-    </section>
+    <!-- </section>
 
     <section id="facts">
       <div id="fact-section">
@@ -68,6 +76,56 @@
             <span>★</span>
             <span>★</span>
           </div>
+        </div>
+      </div>
+    </section> -->
+    
+<!-- 
+    <section id="greet">
+      <div id="greeting-section">
+        <p id="greeting">Welcome!</p>
+      </div>      
+    </section> -->
+
+
+    <section id="destinations">
+      <h2>Destinations</h2>
+      <div class="destination-grid">
+        <div class="destination">
+          <figure>
+            <img src="source/paris.jpg" alt="Paris" />
+            <figcaption>Experience the romance of Paris.</figcaption>
+          </figure>
+          <h3>Paris City Adventure</h3>
+          <p>Visit iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.</p>
+          <a href="#multi-step-form" class="btn btn-primary book-now" data-destination="Paris">Book Now</a>
+        </div>
+        <div class="destination">
+          <figure>
+            <img src="source/alps.jpg" alt="Alps" />
+            <figcaption>Hike the Alps.</figcaption>
+          </figure>
+          <h3>Alpine Hiking Tour</h3>
+          <p>Explore the stunning Alpine region with breathtaking views and challenging trails.</p>
+          <a href="#multi-step-form" class="btn btn-primary book-now" data-destination="Alps">Book Now</a>
+        </div>
+        <div class="destination">
+          <figure>
+            <img src="source/tokyo.jpg" alt="Tokyo" />
+            <figcaption>Explore the futuristic city of Tokyo.</figcaption>
+          </figure>
+          <h3>Tokyo City Adventure</h3>
+          <p>Immerse yourself in the vibrant culture, technology, and history of Japan's capital.</p>
+          <a href="#multi-step-form" class="btn btn-primary book-now" data-destination="Tokyo">Book Now</a>
+        </div>
+        <div class="destination">
+          <figure>
+            <img src="source/bali.jpg" alt="Bali" />
+            <figcaption>Relax on Bali's beaches.</figcaption>
+          </figure>
+          <h3>Bali Beach Getaway</h3>
+          <p>Relax and rejuvenate on the pristine beaches of Bali, surrounded by natural beauty.</p>
+          <a href="#multi-step-form" class="btn btn-primary book-now" data-destination="Bali">Book Now</a>
         </div>
       </div>
     </section>
@@ -103,69 +161,6 @@
       </div>
       
     </section>
-<!-- 
-    <section id="greet">
-      <div id="greeting-section">
-        <p id="greeting">Welcome!</p>
-      </div>      
-    </section> -->
-
-
-    <section id="europe">
-      <h2>Europe</h2>
-      <div class="destination">
-        <figure>
-          <img src="source/paris.jpg" alt="Paris" />
-          <figcaption>Experience the romance of Paris.</figcaption>
-        </figure>
-        <h3>Paris City Adventure</h3>
-        <p>
-          Visit iconic landmarks such as the Eiffel Tower, Louvre Museum, and
-          Notre-Dame Cathedral.
-        </p>
-        <a href="booking.html" class="btn btn-primary">Book Now</a>
-      </div>
-      <div class="destination">
-        <figure>
-          <img src="source/alps.jpg" alt="Alps" />
-          <figcaption>Hike the Alps.</figcaption>
-        </figure>
-        <h3>Alpine Hiking Tour</h3>
-        <p>
-          Explore the stunning Alpine region with breathtaking views and
-          challenging trails.
-        </p>
-        <a href="booking.html" class="btn btn-primary">Book Now</a>
-      </div>
-    </section>
-
-    <section id="asia">
-      <h2>Asia</h2>
-      <div class="destination">
-        <figure>
-          <img src="source/tokyo.jpg" alt="Tokyo" />
-          <figcaption>Explore the futuristic city of Tokyo.</figcaption>
-        </figure>
-        <h3>Tokyo City Adventure</h3>
-        <p>
-          Immerse yourself in the vibrant culture, technology, and history of
-          Japan's capital.
-        </p>
-        <a href="booking.html" class="btn btn-primary">Book Now</a>
-      </div>
-      <div class="destination">
-        <figure>
-          <img src="source/bali.jpg" alt="Bali" />
-          <figcaption>Relax on Bali's beaches.</figcaption>
-        </figure>
-        <h3>Bali Beach Getaway</h3>
-        <p>
-          Relax and rejuvenate on the pristine beaches of Bali, surrounded by
-          natural beauty.
-        </p>
-        <a href="booking.html" class="btn btn-primary">Book Now</a>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -176,6 +171,6 @@
 
 </html>
 
-<script src="script/theme.js"></script>
+<!-- <script src="script/theme.js"></script> -->
 <script src="script/popup_scripts.js"></script>
 <script src="./script/login.js"></script>

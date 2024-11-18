@@ -80,6 +80,162 @@ figure img {
   padding: 10px 20px;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+#about {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#about img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+#team {
+  margin-bottom: 30px;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+#contact {
+  background-color: #007bff;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+#contact ul li {
+  margin-bottom: 10px;
+}
+
+#contact ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact ul li a:hover {
+  text-decoration: underline;
+}
+
+#logo {
+  max-width: 100%; /* Логотип занимает максимум ширины родителя */
+  height: auto; /* Пропорциональное масштабирование */
+  display: block;
+  margin: 20px auto; /* Центрирование */
+}
+
+@media (min-width: 768px) { /* Для экранов шире 768px (например, компьютеров) */
+  #logo {
+    max-width: 300px; /* Ограничиваем ширину логотипа */
+    margin: 30px auto; /* Увеличиваем отступы */
+  }
+}
+
+#carouselExampleCaptions {
+  max-width: 100%; /* Ограничиваем ширину карусели на всех устройствах */
+  height: auto; /* Масштабируем высоту автоматически */
+  margin: 20px auto; /* Центрируем карусель */
+}
+
+#carouselExampleCaptions img {
+  width: 100%; /* Изображения заполняют карусель */
+  height: auto; /* Сохраняем пропорции изображений */
+  object-fit: cover; /* Обеспечиваем хороший вид изображений */
+}
+
+@media (min-width: 768px) { /* Для экранов шире 768px (компьютеры) */
+  #carouselExampleCaptions {
+    max-width: 800px; /* Ограничиваем ширину карусели */
+    max-height: 400px; /* Ограничиваем высоту карусели */
+  }
+
+  #carouselExampleCaptions img {
+    max-height: 400px; /* Ограничиваем высоту изображений */
+  }
+}
+
+#events {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+#events h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
 
 footer {
   background-color: #333;

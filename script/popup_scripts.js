@@ -12,52 +12,52 @@ const facts = [
 //   dateTimeDisplay.textContent = now.toDateString() + " " + now.toLocaleTimeString();
 // }
 
-const createStarRating = () => {
-    const starContainer = document.querySelector('#star-rating');
-    if (!starContainer) return;
+// const createStarRating = () => {
+//     const starContainer = document.querySelector('#star-rating');
+//     if (!starContainer) return;
 
-    const stars = Array.from(starContainer.children);
-    stars.forEach((star, index) => {
-        star.addEventListener('click', () => {
-            stars.forEach((s, i) => {
-                s.style.color = i <= index ? 'gold' : 'gray';
-            });
-        });
-    });
-};
+//     const stars = Array.from(starContainer.children);
+//     stars.forEach((star, index) => {
+//         star.addEventListener('click', () => {
+//             stars.forEach((s, i) => {
+//                 s.style.color = i <= index ? 'gold' : 'gray';
+//             });
+//         });
+//     });
+// };
 
 
-const updateFact = () => {
-    const factButton = document.querySelector('#new-fact-button');
-    const factContainer = document.querySelector('#fact-container');
+// const updateFact = () => {
+//     const factButton = document.querySelector('#new-fact-button');
+//     const factContainer = document.querySelector('#fact-container');
 
-    factButton.addEventListener('click', () => {
-        const randomFact = facts[Math.floor(Math.random() * facts.length)];
-        factContainer.textContent = randomFact;
-    });
-};
+//     factButton.addEventListener('click', () => {
+//         const randomFact = facts[Math.floor(Math.random() * facts.length)];
+//         factContainer.textContent = randomFact;
+//     });
+// };
 
 const themeToggle = () => {
     const themeSwitcher = document.querySelector('#theme-switcher');
     themeSwitcher.addEventListener('change', () => {
-      document.body.classList.toggle('dark-theme');
-      themeSwitcher.classList.toggle('switch-active');
-      updateDarkThemeStyles();
+        document.body.classList.toggle('dark-theme');
+        themeSwitcher.classList.toggle('switch-active');
+        updateDarkThemeStyles();
     });
-  };
-  
-  const updateDarkThemeStyles = () => {
+};
+
+const updateDarkThemeStyles = () => {
     const elementsToUpdate = document.querySelectorAll('#time-section, #fact-section, #multi-step-form, .destination, #greeting-section');
     elementsToUpdate.forEach(element => {
-      if (document.body.classList.contains('dark-theme')) {
-        element.style.backgroundColor = '#444';
-        element.style.color = '#ffffff';
-      } else {
-        element.style.backgroundColor = '#f9f9f9';
-        element.style.color = '#333';
-      }
+        if (document.body.classList.contains('dark-theme')) {
+            element.style.backgroundColor = '#444';
+            element.style.color = '#ffffff';
+        } else {
+            element.style.backgroundColor = '#f9f9f9';
+            element.style.color = '#333';
+        }
     });
-  };
+};
 
 
 const displayTime = () => {
@@ -99,71 +99,134 @@ const multiStepForm = () => {
     const steps = document.querySelectorAll('.form-step');
     const nextButton = document.querySelector('#next-button');
     const backButton = document.querySelector('#back-button');
-    const nameInput = document.querySelector('#name-input');
-    const emailInput = document.querySelector('#email-input');
 
     const updateStep = () => {
         steps.forEach((step, index) => {
             step.style.display = index === currentStep ? 'block' : 'none';
         });
+        backButton.style.display = currentStep > 0 ? 'inline-block' : 'none';
+        nextButton.textContent = currentStep === steps.length - 1 ? 'Submit' : 'Next';
     };
 
-    const validateEmail = (email) => {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(email);
+    const validateFields = () => {
+        // Проверяем, что все поля на текущем шаге заполнены
+        const fields = steps[currentStep].querySelectorAll('input, select');
+        for (const field of fields) {
+            if (!field.value.trim()) {
+                alert('Please fill in all fields before proceeding.');
+                return false;
+            }
+            if (field.type === 'email' && !validateEmail(field.value)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+            if (field.type === 'date' && !validateTravelDate(field.value)) {
+                alert('Please select a travel date in the future.');
+                return false;
+            }
+            if (field.id === 'name-input' && !validateFullName(field.value)) {
+                alert('Please enter your full name (first and last name).');
+                return false;
+            }
+        }
+        return true;
     };
 
-    if (nextButton && backButton) {
-        nextButton.addEventListener('click', () => {
-            if (currentStep === steps.length - 1 && emailInput) {
-                const email = emailInput.value;
-                if (!validateEmail(email) && nameInput.textContent.length < 1) {
-                    alert('Please enter a valid credentials address.');
-                } else{
-                    alert('Form submitted successfully! We will contact you soon.');
-                    return
-                }
-            }
+    const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-            if (currentStep < steps.length - 1) {
-                currentStep++;
-                updateStep();
-            } 
+    const validateTravelDate = (dateString) => {
+        const inputDate = new Date(dateString);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Устанавливаем время на 00:00 для корректного сравнения
+
+        return inputDate > today; // Проверяем, что дата больше сегодняшней
+    };
+
+    const validateFullName = (name) => {
+        // Проверяем, чтобы было как минимум два слова
+        const words = name.trim().split(/\s+/); // Разделяем строку на слова
+        return words.length >= 2;
+    };
+
+    const resetForm = () => {
+        // Сбрасываем поля формы
+        steps.forEach(step => {
+            const fields = step.querySelectorAll('input, select');
+            fields.forEach(field => field.value = '');
         });
 
-        backButton.addEventListener('click', () => {
-            if (currentStep > 0) {
-                currentStep--;
-                updateStep();
-            }
-        });
-    }
+        // Сбрасываем шаг на начальный
+        currentStep = 0;
+        updateStep();
+    };
+
+    nextButton.addEventListener('click', () => {
+        if (currentStep === steps.length - 1) {
+            if (!validateFields()) return;
+            alert('Form submitted successfully!');
+            resetForm(); // Сброс формы после отправки
+            return;
+        }
+        if (!validateFields()) return;
+        currentStep++;
+        updateStep();
+    });
+
+    backButton.addEventListener('click', () => {
+        if (currentStep > 0) currentStep--;
+        updateStep();
+    });
 
     updateStep();
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    multiStepForm();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const bookNowButtons = document.querySelectorAll('.book-now');
+    const destinationSelect = document.querySelector('#multi-step-form select');
+
+    bookNowButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const destination = button.getAttribute('data-destination');
+            
+            // Прокрутка к форме
+            document.querySelector('#multi-step-form').scrollIntoView({ behavior: 'smooth' });
+
+            // Установка значения направления в форму
+            if (destinationSelect) {
+                destinationSelect.value = destination.toLowerCase(); // Значение совпадает с опциями формы
+            }
+        });
+    });
+});
+
 
 const displayGreeting = () => {
     const now = new Date();
     const hours = now.getHours();
     let greeting;
-  
+
     switch (true) {
-      case (hours < 12):
-        greeting = 'Good Morning!';
-        break;
-      case (hours < 18):
-        greeting = 'Good Afternoon!';
-        break;
-      default:
-        greeting = 'Good Evening!';
-        break;
+        case (hours < 12):
+            greeting = 'Good Morning!';
+            break;
+        case (hours < 18):
+            greeting = 'Good Afternoon!';
+            break;
+        default:
+            greeting = 'Good Evening!';
+            break;
     }
-  
+
     const greetingContainer = document.querySelector('#greeting');
     if (greetingContainer) {
-      greetingContainer.textContent = greeting;
+        greetingContainer.textContent = greeting;
     }
-  };
+};
 
 
 

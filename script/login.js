@@ -7,12 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (username) {
         profileLink.textContent = 'Profile';
-        profileLink.href = 'user.html'; 
+        profileLink.href = 'user.html';
     } else {
         profileLink.textContent = 'Login';
         profileLink.href = 'index.html';
     }
 });
+
+const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!passwordRegex.test(password)) {
+        alert(
+            `Password must be at least 8 characters long and include:
+            - At least one uppercase letter
+            - At least one lowercase letter
+            - At least one number
+            - At least one special character (@$!%*?&)`
+        );
+        return false;
+    }
+
+    return true;
+};
 
 if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
@@ -23,6 +40,8 @@ if (loginForm) {
         const buttonId = e.submitter.id;
 
         if (buttonId === "sign-up") {
+            if (!validatePassword(password)) return;
+
             const users = JSON.parse(localStorage.getItem('users')) || {};
             if (users[username]) {
                 alert('Username already exists');
@@ -39,7 +58,7 @@ if (loginForm) {
                 localStorage.setItem('username', username);
                 localStorage.setItem('memberSince', users[username].memberSince); // Сохраняем дату в localStorage
                 alert('Login successful');
-                window.location.href = 'royalco.html';
+                window.location.href = 'user.html';
             } else {
                 alert('Invalid username or password');
             }

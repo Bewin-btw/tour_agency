@@ -1,14 +1,14 @@
 const themeSwitcher = document.getElementById('theme-switcher');
 
 const updateDarkThemeStyles = () => {
-    const elementsToUpdate = document.querySelectorAll('#time-section, #fact-section, #multi-step-form, .destination, #greeting-section');
-    elementsToUpdate.forEach(element => {
+    // Изменяем только фоновый цвет и цвет текста для элементов, не трогая кнопки
+    document.querySelectorAll('body, header, main, footer').forEach(element => {
         if (document.body.classList.contains('dark-theme')) {
-            element.style.backgroundColor = '#444';
-            element.style.color = '#ffffff';
+            element.style.backgroundColor = '#222'; // Темный фон
+            element.style.color = '#ddd'; // Светлый текст
         } else {
-            element.style.backgroundColor = '#f9f9f9';
-            element.style.color = '#333';
+            element.style.backgroundColor = ''; // Сброс стилей
+            element.style.color = ''; // Сброс стилей
         }
     });
 };
@@ -16,6 +16,7 @@ const updateDarkThemeStyles = () => {
 themeSwitcher.addEventListener('change', () => {
     document.body.classList.toggle('dark-theme');
     updateDarkThemeStyles();
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
 });
 
 window.onload = () => {
@@ -26,6 +27,7 @@ window.onload = () => {
     }
     updateDarkThemeStyles();
 };
+
 
 themeSwitcher.addEventListener('change', () => {
     const theme = themeSwitcher.checked ? 'dark' : 'light';
