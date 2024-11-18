@@ -77,3 +77,225 @@ footer {
     color: #fff;
     padding: 10px 0;
 }
+
+/* Светлая тема (по умолчанию) */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-theme .navbar {
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+body.light-theme .btn-outline-light {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .navbar {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-theme .btn-outline-light {
+    background-color: #121212;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.dark-theme .form-select,
+body.light-theme .form-select {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+body.dark-theme .review-card {
+    background-color: #242424;
+    border: 1px solid #444444;
+    color: #ffffff;
+}
+
+body.light-theme .review-card {
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    color: #000000;
+}
+
+/* Общее */
+.review-card {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+/* Общий стиль кнопки переключения темы */
+.theme-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Ховер эффект */
+#theme-toggle:hover {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}
+
+/* Темы */
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Светлая тема: стили кнопки */
+body.light-theme #theme-toggle {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+body.light-theme #theme-toggle:hover {
+    background-color: #f1f1f1;
+    border-color: #bbb;
+}
+
+/* Темная тема: стили кнопки */
+body.dark-theme #theme-toggle {
+    color: #fff;
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-theme #theme-toggle:hover {
+    background-color: #444;
+    border-color: #555;
+}
+/* Цвет текста отзывов по умолчанию (чёрный шрифт) */
+.review-card {
+    color: #000;
+}
+
+/* Обновление для светлой темы */
+body.light-theme .review-card {
+    color: #000;
+}
+
+/* Обновление для тёмной темы */
+body.dark-theme .review-card {
+    color: #000;
+}
+/* Фон карточек отзывов */
+.review-card {
+    background-color: #555; /* Тёмно-серый фон */
+    border-radius: 10px; /* Скруглённые углы */
+    padding: 20px; /* Отступ внутри карточки */
+    margin-bottom: 20px; /* Расстояние между карточками */
+    color: #000; /* Цвет текста */
+    transition: background-color 0.3s; /* Плавный переход при изменении темы */
+}
+
+/* Фон для светлой темы */
+body.light-theme .review-card {
+    background-color: #eaeaea; /* Светло-серый фон для светлой темы */
+}
+
+/* Фон для тёмной темы */
+body.dark-theme .review-card {
+    background-color: #555; /* Тёмно-серый фон для тёмной темы */
+}
+/* Стили для формы */
+.form-container {
+    background-color: #444; /* Темно-серый фон */
+    border-radius: 10px; /* Скругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    color: #fff; /* Белый текст */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Небольшая тень */
+}
+
+/* Стили для инпутов и текста */
+.form-container input[type="text"],
+.form-container textarea,
+.form-container select {
+    background-color: #555; /* Темно-серый фон инпутов */
+    color: #fff; /* Белый текст */
+    border: 1px solid #666; /* Граница инпутов */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 10px; /* Внутренний отступ */
+    width: 100%; /* Ширина на всю форму */
+    margin-bottom: 15px; /* Отступы между элементами */
+    transition: background-color 0.3s, border-color 0.3s; /* Плавные переходы */
+}
+
+/* При фокусе на инпуте */
+.form-container input[type="text"]:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    background-color: #666; /* Фон становится чуть светлее при фокусе */
+    border-color: #888; /* Изменение цвета границы */
+    outline: none; /* Убираем стандартный outline */
+}
+
+/* Стили для кнопки */
+.form-container button {
+    background-color: #007bff; /* Синий фон кнопки */
+    color: #fff; /* Белый текст */
+    border: none; /* Убираем границы */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer; /* Указатель на курсоре */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+/* При наведении на кнопку */
+.form-container button:hover {
+    background-color: #0056b3; /* Темно-синий фон */
+}
+
+/* Стили для светлой темы */
+body.light-theme .form-container {
+    background-color: #eaeaea; /* Светлый фон */
+    color: #000; /* Тёмный текст */
+}
+
+body.light-theme .form-container input[type="text"],
+body.light-theme .form-container textarea,
+body.light-theme .form-container select {
+    background-color: #fff; /* Белый фон инпутов */
+    color: #000; /* Тёмный текст */
+    border-color: #ccc; /* Светлая граница */
+}
+
+body.light-theme .form-container button {
+    background-color: #333; /* Тёмный фон кнопки */
+    color: #fff; /* Белый текст */
+}
+
+body.light-theme .form-container button:hover {
+    background-color: #555; /* Тёмно-серый фон при наведении */
+}
