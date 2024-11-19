@@ -37,6 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updateButtonText();
     });
+
+    // Загружаем почту из localStorage
+    const savedEmail = localStorage.getItem("email");
+    const emailInput = document.getElementById("email");
+    if (savedEmail && emailInput) {
+        emailInput.value = savedEmail;
+    }
+
+    // Слушаем изменения в поле email и сохраняем в localStorage
+    if (emailInput) {
+        emailInput.addEventListener("input", function () {
+            localStorage.setItem("email", emailInput.value.trim());
+        });
+    }
 });
 
 // Работа с формой
@@ -53,6 +67,8 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     // Проверки
     if (!name) {
         errors.push("Name is required.");
+    } else if (name.length < 3) {
+        errors.push("Name must be at least 3 characters long.");
     }
     if (!email) {
         errors.push("Email is required.");
@@ -70,6 +86,9 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         alert(errors.join("\n"));
         return;
     }
+
+    // Сохраняем почту в localStorage
+    localStorage.setItem("email", email);
 
     // Если ошибок нет
     alert("Thank you! Your message has been sent.");
