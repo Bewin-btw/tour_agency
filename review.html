@@ -166,18 +166,17 @@
     <form id="reviewForm" action="#" method="post">
       <div class="mb-3">
         <label for="name" class="form-label">Your Name</label>
-        <input type="text" class="form-control" id="name" name="name" required />
+        <input type="text" class="form-control" id="name" name="name" autocomplete="name" required />
       </div>
 
       <div class="mb-3">
         <label for="review" class="form-label">Your Review</label>
-        <textarea class="form-control" id="review" name="review" rows="5" required>
-        </textarea>
+        <textarea class="form-control" id="review" name="review" rows="5" autocomplete="off" required></textarea>
       </div>
 
       <div class="mb-3">
         <label for="rating" class="form-label">Your Rating</label>
-        <select class="form-select" id="rating" name="rating" required>
+        <select class="form-select" id="rating" name="rating" autocomplete="off" required>
           <option value="" disabled selected>Choose rating</option>
           <option value="5">5 Stars</option>
           <option value="4">4 Stars</option>
@@ -189,6 +188,7 @@
 
       <button type="submit" class="btn btn-primary">Submit Review</button>
     </form>
+
   </section>
 </main>
 
