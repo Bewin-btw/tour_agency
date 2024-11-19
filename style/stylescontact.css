@@ -1,7 +1,10 @@
+/* Подключаем шрифты Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
 /* Базовые стили для body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    background-color: #fdf5e6;
     color: #000;
     margin: 0;
     padding: 0;
@@ -46,10 +49,79 @@ form {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+    margin-top: 30px;
 }
 
 label {
     margin-top: 10px;
+}
+
+/* Анимация для плавного появления */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Стиль для контейнера с изображением и текстом */
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Центровка изображения по горизонтали */
+    align-items: center; /* Центровка изображения по вертикали */
+    overflow: hidden; /* Скрывает части, выходящие за пределы контейнера */
+    height: 400px; /* Задайте нужную высоту для контейнера */
+}
+
+/* Стили для изображения */
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px; /* Ограничение максимальной ширины изображения */
+    max-height: 800px;
+    transition: transform 0.3s ease-in-out; /* Плавная анимация для изображения */
+}
+
+/* Стили для текста */
+.image-container .text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Плавное изменение текста */
+}
+
+/* Эффект при наведении на изображение */
+.image-container:hover img {
+    transform: scale(1.05); /* Увеличение изображения */
+}
+
+/* Эффект при наведении на контейнер */
+.image-container:hover .text-overlay {
+    transform: translate(-50%, -10px); /* Подъем текста вверх */
+    font-size: 2.2em; /* Увеличение размера текста */
+}
+
+section img {
+    border: 3px solid #d35519; /* Синяя рамка */
+    border-radius: 50%; /* Сделаем изображение круглым */
+    padding: 5px;
+    transition: all 0.3s ease-in-out; /* Плавные изменения */
+}
+
+section img:hover {
+    transform: scale(1.1); /* Увеличиваем изображение при наведении */
+    box-shadow: 0px 0px 20px rgb(222, 152, 56); /* Яркая тень */
+    border-color: #e74c3c; /* Меняем цвет рамки на красный при наведении */
 }
 
 input,
@@ -74,6 +146,52 @@ button {
 }
 
 button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+#contactButton {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+body.dark-mode #contactButton {
+    background-color: #ff6600; /* Оставляем оранжевый в темном режиме */
+    color: #fff;
+}
+
+body.dark-mode #contactButton:hover {
+    background-color: #e65c00; /* Темный оранжевый при наведении в темном режиме */
+}
+
+#changeBackgroundButton {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #ff6600; /* Цвет фона для этой кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+#changeBackgroundButton:hover {
+    background-color: #d35519; /* Темно-желтый при наведении */
+    transform: scale(1.05);
+}
+
+
+#contactButton:hover {
     background-color: #e65c00;
     transform: scale(1.05);
 }
@@ -147,6 +265,183 @@ footer {
     margin: 0;
 }
 
+/* Стили для заголовка и подзаголовка на странице Contact Us */
+.contact-heading {
+    font-family: 'Poppins', sans-serif;  /* Используем шрифт Poppins для заголовка */
+    font-size: 4em;  /* Увеличиваем размер заголовка */
+    font-weight: 700;  /* Жирное начертание */
+    color: #ff6600;  /* Оранжевый цвет */
+    text-align: center;  /* Выравнивание по центру */
+    margin-top: 50px;  /* Отступ сверху */
+    text-transform: uppercase;  /* Преобразуем в верхний регистр */
+    letter-spacing: 3px;  /* Расстояние между буквами */
+    line-height: 1.2;  /* Межстрочный интервал */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);  /* Тень для заголовка */
+}
+
+/* Стили для подзаголовка */
+.contact-subheading {
+    font-family: 'Roboto', sans-serif;  /* Шрифт для подзаголовка */
+    font-size: 1.4em;  /* Размер шрифта */
+    color: #888;  /* Цвет текста */
+    font-style: italic;  /* Курсив */
+    text-align: center;  /* Выравнивание по центру */
+    margin-top: 15px;  /* Отступ сверху */
+    margin-bottom: 30px;  /* Отступ снизу */
+    line-height: 1.5;  /* Межстрочный интервал */
+}
+
+/* Добавим анимацию при появлении */
+.contact-heading, .contact-subheading {
+    animation: fadeIn 1s ease-out;  /* Анимация появления */
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff6600;  /* Оранжевая обводка при фокусе */
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);  /* Увеличение кнопки при наведении */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+/* Стили для отзывов */
+.testimonial {
+    font-style: italic;
+    background-color: #fff;
+    padding: 15px;
+    border-left: 5px solid #ff6600;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.client-testimonials {
+    background-color: #f8f8f8;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.testimonial-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff6600;  /* Цвет заголовка отзывов */
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    max-width: 300px;
+    width: 100%;
+    margin: 15px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05);
+}
+
+.client-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);  /* Тень на фото клиента */
+}
+
+.client-quote {
+    font-style: italic;
+    color: #555;
+}
+
+.client-name {
+    margin: 0;
+    font-weight: bold;
+}
+
+
+
+
 /* Переключатель темы */
 .theme-toggle-wrapper {
     display: flex;
@@ -171,7 +466,7 @@ footer {
 }
 
 body.light-theme {
-    background-color: #f4f4f4;
+    background-color: #f8eae1;
     color: #000;
 }
 
@@ -217,16 +512,18 @@ body.dark-theme .testimonial-item p {
 
 /* Светлые стили */
 body.light-theme blockquote.testimonial {
-    background-color: transparent;
+    background-color: oldlace;
     color: #333;
     padding: 15px;
     font-style: italic;
     margin: 20px 0;
 }
 
-body.light-theme .client-testimonials,
+body.light-theme .client-testimonials{
+    background-color:#f8eae1;
+}
 body.light-theme .testimonial-item {
-    background-color: transparent;
+    background-color: oldlace;
     color: #333;
 }
 
@@ -284,15 +581,6 @@ body.dark-theme #contactForm textarea:focus {
     outline: none;
 }
 
-/* Темный режим для кнопки */
-body.dark-theme #contactForm button {
-    background-color: #0066cc; /* Тёмно-синий фон кнопки */
-    color: #fff; /* Белый текст */
-    border: none;
-}
 
-body.dark-theme #contactForm button:hover {
-    background-color: #004c99; /* Ещё темнее при наведении */
-}
 
 

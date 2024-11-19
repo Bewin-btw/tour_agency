@@ -36,30 +36,51 @@
 </header>
 
 <main>
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or would like to book a tour, feel free to contact us using the form below.</p>
+  <section id="contact-section">
+    <h1 class="contact-heading">Contact Us</h1>  <!-- Заголовок -->
+    <p class="contact-subheading">We'd love to hear from you! Please fill out the form below.</p>  <!-- Подзаголовок -->
 
+    <div class="image-container">
+      <img src="source/red.jpg" alt="Stunning Landscape">
+      <div class="text-overlay">
+        Explore stunning landscapes with our tours!
+      </div>
+    </div>
 
-    <figure>
-      <img src="source/tourimage.jpg" alt="Beautiful landscape of a tour destination" />
-      <figcaption>Explore stunning landscapes with our tours!</figcaption>
-    </figure>
 
     <form id="contactForm" action="#" method="post">
       <div class="mb-3">
         <label for="name" class="form-label">Name:</label>
-        <input type="text" id="name" name="name" class="form-control"  />
+        <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                autocomplete="name"
+                required
+        />
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Email:</label>
-        <input id="email" name="email" class="form-control" />
+        <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                autocomplete="email"
+                required
+        />
       </div>
 
       <div class="mb-3">
         <label for="tour" class="form-label">Select a Tour:</label>
-        <select id="tour" name="tour" class="form-select">
+        <select
+                id="tour"
+                name="tour"
+                class="form-select"
+                autocomplete="off"
+        required>
           <option value="beach">Beach Tour</option>
           <option value="mountain">Mountain Adventure</option>
           <option value="city">City Exploration</option>
@@ -68,10 +89,17 @@
 
       <div class="mb-3">
         <label for="message" class="form-label">Message:</label>
-        <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+        <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                rows="4"
+                autocomplete="off"
+                required>
+    </textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary">Send Message</button>
+      <button id="contactButton" type="submit">Send Message</button>
     </form>
   </section>
 
@@ -109,10 +137,6 @@
     </div>
   </section>
 
-
-  <button class="btn btn-primary mt-3" onclick="changeBackgroundColor()">
-    Change Background Color
-  </button>
 </main>
 
 
@@ -124,6 +148,6 @@
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script/scriptcontact.js"></script>
-<script src="./script/login.js"></script>
+<script src="script/login.js"></script>
 </body>
 </html>
