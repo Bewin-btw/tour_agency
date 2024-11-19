@@ -418,3 +418,11 @@ body.light-theme .ratingFilter {
 body.dark-theme .formlabel {
     color: #fff; /* Белый цвет для текста в темной теме */
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }

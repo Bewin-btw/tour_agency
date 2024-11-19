@@ -96,66 +96,6 @@ const handleImageNavigation = () => {
 };
 
 const multiStepForm = () => {
-<<<<<<< HEAD
-    let currentStep = 0;
-    const steps = document.querySelectorAll('.form-step');
-    const nextButton = document.querySelector('#next-button');
-    const backButton = document.querySelector('#back-button');
-    const emailInput = document.querySelector('#email-input');
-
-    // Проверка, залогинен ли пользователь
-    const isLoggedIn = () => {
-        const username = localStorage.getItem('username');
-        return !!username; // Вернет true, если пользователь залогинен
-    };
-
-    // Заполнение email по умолчанию из профиля
-    const prefillEmail = () => {
-        const username = localStorage.getItem('username');
-        const savedEmail = localStorage.getItem('email');
-        if (emailInput) {
-            emailInput.value = savedEmail || `${username}@gmail.com`; // Используем сохраненный email или генерируем новый
-        }
-    };
-
-    // Обновление шага формы
-    const updateStep = () => {
-        steps.forEach((step, index) => {
-            step.style.display = index === currentStep ? 'block' : 'none';
-        });
-        backButton.style.display = currentStep > 0 ? 'inline-block' : 'none';
-        nextButton.textContent = currentStep === steps.length - 1 ? 'Submit' : 'Next';
-    };
-
-    // Валидация полей формы
-    const validateFields = () => {
-        if (!isLoggedIn()) {
-            alert('You need to be logged in to submit the form.');
-            return false;
-        }
-
-        const fields = steps[currentStep].querySelectorAll('input, select');
-        for (const field of fields) {
-            if (!field.value.trim()) {
-                alert('Please fill in all fields before proceeding.');
-                return false;
-            }
-            if (field.type === 'email' && !validateEmail(field.value)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-            if (field.type === 'date' && !validateTravelDate(field.value)) {
-                alert('Please select a travel date in the future.');
-                return false;
-            }
-            if (field.id === 'name-input' && !validateFullName(field.value)) {
-                alert('Please enter your full name (first and last name).');
-                return false;
-            }
-        }
-        return true;
-    };
-=======
   let currentStep = 0;
   const steps = document.querySelectorAll(".form-step");
   const nextButton = document.querySelector("#next-button");
@@ -193,61 +133,9 @@ const multiStepForm = () => {
     }
     return true;
   };
->>>>>>> 9d0c4f6 (light dark mode)
 
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-<<<<<<< HEAD
-    const validateTravelDate = (dateString) => {
-        const inputDate = new Date(dateString);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Устанавливаем время на 00:00 для корректного сравнения
-        return inputDate > today; // Проверяем, что дата больше сегодняшней
-    };
-
-    const validateFullName = (name) => {
-        const words = name.trim().split(/\s+/); // Разделяем строку на слова
-        return words.length >= 2;
-    };
-
-    const resetForm = () => {
-        // Сбрасываем поля формы
-        steps.forEach(step => {
-            const fields = step.querySelectorAll('input, select');
-            fields.forEach(field => field.value = '');
-        });
-
-        currentStep = 0; // Сбрасываем шаг на начальный
-        updateStep();
-    };
-
-    // Сохранение измененного email
-    const saveEmail = () => {
-        const currentEmail = emailInput.value.trim();
-        const savedEmail = localStorage.getItem('email');
-        if (currentEmail !== savedEmail) {
-            localStorage.setItem('email', currentEmail);
-            alert('Your email has been updated.');
-        }
-    };
-
-    nextButton.addEventListener('click', () => {
-        if (currentStep === steps.length - 1) {
-            if (!validateFields()) return;
-            saveEmail(); // Сохраняем email при отправке формы
-            alert('Form submitted successfully!');
-            resetForm();
-            return;
-        }
-        if (!validateFields()) return;
-        currentStep++;
-        updateStep();
-    });
-
-    backButton.addEventListener('click', () => {
-        if (currentStep > 0) currentStep--;
-        updateStep();
-=======
   const validateTravelDate = (dateString) => {
     const inputDate = new Date(dateString);
     const today = new Date();
@@ -267,20 +155,11 @@ const multiStepForm = () => {
     steps.forEach((step) => {
       const fields = step.querySelectorAll("input, select");
       fields.forEach((field) => (field.value = ""));
->>>>>>> 9d0c4f6 (light dark mode)
     });
 
     // Сбрасываем шаг на начальный
     currentStep = 0;
     updateStep();
-<<<<<<< HEAD
-    prefillEmail(); // Заполняем email при загрузке формы
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    const bookNowButtons = document.querySelectorAll('.book-now');
-    const destinationSelect = document.querySelector('#multi-step-form select');
-=======
   };
 
   nextButton.addEventListener("click", () => {
@@ -310,7 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const bookNowButtons = document.querySelectorAll(".book-now");
   const destinationSelect = document.querySelector("#multi-step-form select");
->>>>>>> 9d0c4f6 (light dark mode)
 
   bookNowButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -363,15 +241,6 @@ const subForm = () => {
   }
 };
 
-<<<<<<< HEAD
-document.addEventListener('DOMContentLoaded', () => {
-    displayTime();
-    multiStepForm();
-
-    displayGreeting();
-    subForm();
-});
-=======
 document.addEventListener("DOMContentLoaded", () => {
   createStarRating();
   updateFact();
@@ -430,4 +299,3 @@ document.addEventListener("DOMContentLoaded", function () {
     updateButtonText();
   });
 });
->>>>>>> 9d0c4f6 (light dark mode)
