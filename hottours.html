@@ -85,7 +85,8 @@
                       shopping.
                     </p>
                     <p class="tour-price"><strong>Price: 600,000tg</strong></p>
-                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <a href="contact.html#contact-section" class="btn btn-primary">Book Now</a>
+
                   </div>
                 </div>
               </div>
@@ -111,7 +112,7 @@
                       the sea.
                     </p>
                     <p class="tour-price"><strong>Price: 500,000tg</strong></p>
-                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <a href="contact.html#contact-section" class="btn btn-primary">Book Now</a>
                   </div>
                 </div>
               </div>
@@ -137,7 +138,7 @@
                       unforgettable vacation.
                     </p>
                     <p class="tour-price"><strong>Price: 450,000tg</strong></p>
-                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    <a href="contact.html#contact-section" class="btn btn-primary">Book Now</a>
                   </div>
                 </div>
               </div>
@@ -176,7 +177,7 @@
           and cozy villas above the water. Perfect for a romantic vacation.
         </p>
         <p class="tour-price">The price starts from: 1,200,000tg</p>
-        <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
+        <a href="contact.html#contact-section" class="btn btn-primary">Book Now</a>
       </div>
 
       <div class="tour-item mt-4 p-3">
@@ -190,7 +191,7 @@
           delightful local kitchen.
         </p>
         <p class="tour-price">The price starts from: 400,000tg</p>
-        <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
+        <a href="contact.html#contact-section" class="btn btn-primary">Book Now</a>
       </div>
 
       <div class="tour-item mt-4 p-3">
@@ -204,7 +205,7 @@
           famous hammam. The perfect balance between culture and beaches.
         </p>
         <p class="tour-price">The price starts from: 550,000tg</p>
-        <a href="booking.html" class="btn btn-primary mt-3">Book Now</a>
+        <a href="contact.html#contact-section" class="btn btn-primary">Book Now</a>
       </div>
     </div>
 
@@ -269,5 +270,26 @@
         });
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const hash = window.location.hash;
+      
+          // Проверяем, есть ли якорь в URL
+          if (hash && document.querySelector(hash)) {
+              const targetElement = document.querySelector(hash);
+      
+              // Плавная прокрутка к элементу
+              targetElement.scrollIntoView({ behavior: "smooth" });
+      
+              // Если нужно сфокусировать на форме
+              const contactForm = document.getElementById("contactForm");
+              if (contactForm) {
+                  contactForm.scrollIntoView({ behavior: "smooth" });
+                  contactForm.querySelector("input, textarea").focus();
+              }
+          }
+      });
+      </script>
+      
   </body>
 </html>
