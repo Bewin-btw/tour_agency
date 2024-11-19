@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updateButtonText();
     });
-})
+});
 
 // Работа с формой
 
@@ -61,6 +61,8 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     }
     if (!message) {
         errors.push("Message is required.");
+    } else if (message.length < 30) {
+        errors.push("Message must be at least 30 characters long.");
     }
 
     // Если есть ошибки, выводим их
