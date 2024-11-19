@@ -1,92 +1,92 @@
 body {
-    display: flex;
-    height: 100vh; 
-    margin: 0; 
-    font-family: Arial, sans-serif; 
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-    display: flex; 
-    width: 100%; 
+  display: flex;
+  width: 100%;
 }
 
 .left-side {
-    flex: 1; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    background-color: #f0f0f0; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
 .right-side {
-    flex: 1; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    font-size: 36px; 
-    color: #333; 
-    text-align: center; 
+  font-size: 36px;
+  color: #333;
+  text-align: center;
 }
 
 #loginForm button {
-    width: 48%; 
-    margin: 5px 1%; 
+  width: 48%;
+  margin: 5px 1%;
 }
 
 #button-container {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 100%; 
-    padding: 10px; 
-    margin: 10px 0; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    font-size: 16px; 
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 button {
-    width: 100%; 
-    padding: 10px; 
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    border-radius: 4px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    transition: background-color 0.3s; 
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3; 
+  background-color: #0056b3;
 }
 
 .left-side {
-    display: flex;
-    flex-direction: column; /* Устанавливает вертикальное расположение элементов */
-    align-items: center; /* Центрирует содержимое по горизонтали */
-    justify-content: center; /* Центрирует содержимое по вертикали */
-    text-align: center; /* Центрирует текст */
-    padding: 20px;
-    background-color: #f8f9fa; /* Добавить легкий фон, если требуется */
+  display: flex;
+  flex-direction: column; /* Устанавливает вертикальное расположение элементов */
+  align-items: center; /* Центрирует содержимое по горизонтали */
+  justify-content: center; /* Центрирует содержимое по вертикали */
+  text-align: center; /* Центрирует текст */
+  padding: 20px;
+  background-color: #f8f9fa; /* Добавить легкий фон, если требуется */
 }
 
 .left-side h1 {
-    margin-bottom: 20px; /* Отступ между заголовком и логотипом */
-    font-size: 2rem;
-    color: #333;
+  margin-bottom: 20px; /* Отступ между заголовком и логотипом */
+  font-size: 2rem;
+  color: #333;
 }
 
 #logo {
-    max-width: 100%; /* Подстраивает логотип под размеры контейнера */
-    height: auto;
-    max-height: 150px; /* Ограничение по высоте */
-    border-radius: 10px; /* Сглаженные углы, если требуется */
+  max-width: 100%; /* Подстраивает логотип под размеры контейнера */
+  height: auto;
+  max-height: 150px; /* Ограничение по высоте */
+  border-radius: 10px; /* Сглаженные углы, если требуется */
 }

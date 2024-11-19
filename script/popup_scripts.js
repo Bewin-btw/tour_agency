@@ -1,9 +1,9 @@
 const facts = [
-    'Did you know that our tours are designed with both adventure and relaxation in mind?',
-    'Every destination has its own unique history and charm, waiting for you to explore.',
-    'Travel is the only thing you buy that makes you richer.',
-    'The best journeys answer questions that, in the beginning, you didn’t even think to ask.',
-    'Our expert guides make sure every trip is a memorable adventure.'
+  "Did you know that our tours are designed with both adventure and relaxation in mind?",
+  "Every destination has its own unique history and charm, waiting for you to explore.",
+  "Travel is the only thing you buy that makes you richer.",
+  "The best journeys answer questions that, in the beginning, you didn’t even think to ask.",
+  "Our expert guides make sure every trip is a memorable adventure.",
 ];
 
 // const dateTimeDisplay = document.getElementById("currentDateTime");
@@ -26,7 +26,6 @@ const facts = [
 //     });
 // };
 
-
 // const updateFact = () => {
 //     const factButton = document.querySelector('#new-fact-button');
 //     const factContainer = document.querySelector('#fact-container');
@@ -38,63 +37,66 @@ const facts = [
 // };
 
 const themeToggle = () => {
-    const themeSwitcher = document.querySelector('#theme-switcher');
-    themeSwitcher.addEventListener('change', () => {
-        document.body.classList.toggle('dark-theme');
-        themeSwitcher.classList.toggle('switch-active');
-        updateDarkThemeStyles();
-    });
+  const themeSwitcher = document.querySelector("#theme-switcher");
+  themeSwitcher.addEventListener("change", () => {
+    document.body.classList.toggle("dark-theme");
+    themeSwitcher.classList.toggle("switch-active");
+    updateDarkThemeStyles();
+  });
 };
 
 const updateDarkThemeStyles = () => {
-    const elementsToUpdate = document.querySelectorAll('#time-section, #fact-section, #multi-step-form, .destination, #greeting-section');
-    elementsToUpdate.forEach(element => {
-        if (document.body.classList.contains('dark-theme')) {
-            element.style.backgroundColor = '#444';
-            element.style.color = '#ffffff';
-        } else {
-            element.style.backgroundColor = '#f9f9f9';
-            element.style.color = '#333';
-        }
-    });
+  const elementsToUpdate = document.querySelectorAll(
+    "#time-section, #fact-section, #multi-step-form, .destination, #greeting-section"
+  );
+  elementsToUpdate.forEach((element) => {
+    if (document.body.classList.contains("dark-theme")) {
+      element.style.backgroundColor = "#444";
+      element.style.color = "#ffffff";
+    } else {
+      element.style.backgroundColor = "#f9f9f9";
+      element.style.color = "#333";
+    }
+  });
 };
 
-
 const displayTime = () => {
-    const timeButton = document.getElementById('time-button');
-    const timeContainer = document.getElementById('time-container');
+  const timeButton = document.getElementById("time-button");
+  const timeContainer = document.getElementById("time-container");
 
-    if (timeButton && timeContainer) {
-        timeButton.addEventListener('click', () => {
-            const currentTime = new Date().toLocaleTimeString();
-            timeContainer.textContent = currentTime;
+  if (timeButton && timeContainer) {
+    timeButton.addEventListener("click", () => {
+      const currentTime = new Date().toLocaleTimeString();
+      timeContainer.textContent = currentTime;
 
-            // Добавляем класс highlight для анимации
-            timeContainer.classList.add('highlight');
-            setTimeout(() => {
-                timeContainer.classList.remove('highlight');
-            }, 2000);
-        });
-    }
+      // Добавляем класс highlight для анимации
+      timeContainer.classList.add("highlight");
+      setTimeout(() => {
+        timeContainer.classList.remove("highlight");
+      }, 2000);
+    });
+  }
 };
 
 const handleImageNavigation = () => {
-    const destinations = document.querySelectorAll('.destination');
-    let currentIndex = 0;
+  const destinations = document.querySelectorAll(".destination");
+  let currentIndex = 0;
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowRight') {
-            currentIndex = (currentIndex + 1) % destinations.length;
-        } else if (event.key === 'ArrowLeft') {
-            currentIndex = (currentIndex - 1 + destinations.length) % destinations.length;
-        }
-        destinations.forEach((dest, index) => {
-            dest.style.display = index === currentIndex ? 'block' : 'none';
-        });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      currentIndex = (currentIndex + 1) % destinations.length;
+    } else if (event.key === "ArrowLeft") {
+      currentIndex =
+        (currentIndex - 1 + destinations.length) % destinations.length;
+    }
+    destinations.forEach((dest, index) => {
+      dest.style.display = index === currentIndex ? "block" : "none";
     });
+  });
 };
 
 const multiStepForm = () => {
+<<<<<<< HEAD
     let currentStep = 0;
     const steps = document.querySelectorAll('.form-step');
     const nextButton = document.querySelector('#next-button');
@@ -153,9 +155,49 @@ const multiStepForm = () => {
         }
         return true;
     };
+=======
+  let currentStep = 0;
+  const steps = document.querySelectorAll(".form-step");
+  const nextButton = document.querySelector("#next-button");
+  const backButton = document.querySelector("#back-button");
 
-    const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const updateStep = () => {
+    steps.forEach((step, index) => {
+      step.style.display = index === currentStep ? "block" : "none";
+    });
+    backButton.style.display = currentStep > 0 ? "inline-block" : "none";
+    nextButton.textContent =
+      currentStep === steps.length - 1 ? "Submit" : "Next";
+  };
 
+  const validateFields = () => {
+    // Проверяем, что все поля на текущем шаге заполнены
+    const fields = steps[currentStep].querySelectorAll("input, select");
+    for (const field of fields) {
+      if (!field.value.trim()) {
+        alert("Please fill in all fields before proceeding.");
+        return false;
+      }
+      if (field.type === "email" && !validateEmail(field.value)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+      if (field.type === "date" && !validateTravelDate(field.value)) {
+        alert("Please select a travel date in the future.");
+        return false;
+      }
+      if (field.id === "name-input" && !validateFullName(field.value)) {
+        alert("Please enter your full name (first and last name).");
+        return false;
+      }
+    }
+    return true;
+  };
+>>>>>>> 9d0c4f6 (light dark mode)
+
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+<<<<<<< HEAD
     const validateTravelDate = (dateString) => {
         const inputDate = new Date(dateString);
         const today = new Date();
@@ -205,68 +247,123 @@ const multiStepForm = () => {
     backButton.addEventListener('click', () => {
         if (currentStep > 0) currentStep--;
         updateStep();
+=======
+  const validateTravelDate = (dateString) => {
+    const inputDate = new Date(dateString);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Устанавливаем время на 00:00 для корректного сравнения
+
+    return inputDate > today; // Проверяем, что дата больше сегодняшней
+  };
+
+  const validateFullName = (name) => {
+    // Проверяем, чтобы было как минимум два слова
+    const words = name.trim().split(/\s+/); // Разделяем строку на слова
+    return words.length >= 2;
+  };
+
+  const resetForm = () => {
+    // Сбрасываем поля формы
+    steps.forEach((step) => {
+      const fields = step.querySelectorAll("input, select");
+      fields.forEach((field) => (field.value = ""));
+>>>>>>> 9d0c4f6 (light dark mode)
     });
 
+    // Сбрасываем шаг на начальный
+    currentStep = 0;
     updateStep();
+<<<<<<< HEAD
     prefillEmail(); // Заполняем email при загрузке формы
 };
 
 document.addEventListener('DOMContentLoaded', () => {
     const bookNowButtons = document.querySelectorAll('.book-now');
     const destinationSelect = document.querySelector('#multi-step-form select');
+=======
+  };
 
-    bookNowButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault();
-            const destination = button.getAttribute('data-destination');
-            
-            // Прокрутка к форме
-            document.querySelector('#multi-step-form').scrollIntoView({ behavior: 'smooth' });
-
-            // Установка значения направления в форму
-            if (destinationSelect) {
-                destinationSelect.value = destination.toLowerCase(); // Значение совпадает с опциями формы
-            }
-        });
-    });
-});
-
-
-const displayGreeting = () => {
-    const now = new Date();
-    const hours = now.getHours();
-    let greeting;
-
-    switch (true) {
-        case (hours < 12):
-            greeting = 'Good Morning!';
-            break;
-        case (hours < 18):
-            greeting = 'Good Afternoon!';
-            break;
-        default:
-            greeting = 'Good Evening!';
-            break;
+  nextButton.addEventListener("click", () => {
+    if (currentStep === steps.length - 1) {
+      if (!validateFields()) return;
+      alert("Form submitted successfully!");
+      resetForm(); // Сброс формы после отправки
+      return;
     }
+    if (!validateFields()) return;
+    currentStep++;
+    updateStep();
+  });
 
-    const greetingContainer = document.querySelector('#greeting');
-    if (greetingContainer) {
-        greetingContainer.textContent = greeting;
-    }
+  backButton.addEventListener("click", () => {
+    if (currentStep > 0) currentStep--;
+    updateStep();
+  });
+
+  updateStep();
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  multiStepForm();
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+  const bookNowButtons = document.querySelectorAll(".book-now");
+  const destinationSelect = document.querySelector("#multi-step-form select");
+>>>>>>> 9d0c4f6 (light dark mode)
+
+  bookNowButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const destination = button.getAttribute("data-destination");
+
+      // Прокрутка к форме
+      document
+        .querySelector("#multi-step-form")
+        .scrollIntoView({ behavior: "smooth" });
+
+      // Установка значения направления в форму
+      if (destinationSelect) {
+        destinationSelect.value = destination.toLowerCase(); // Значение совпадает с опциями формы
+      }
+    });
+  });
+});
+
+const displayGreeting = () => {
+  const now = new Date();
+  const hours = now.getHours();
+  let greeting;
+
+  switch (true) {
+    case hours < 12:
+      greeting = "Good Morning!";
+      break;
+    case hours < 18:
+      greeting = "Good Afternoon!";
+      break;
+    default:
+      greeting = "Good Evening!";
+      break;
+  }
+
+  const greetingContainer = document.querySelector("#greeting");
+  if (greetingContainer) {
+    greetingContainer.textContent = greeting;
+  }
+};
 
 const subForm = () => {
-    const subscriptionForm = document.getElementById("subscriptionForm");
-    if (subscriptionForm) {
-        subscriptionForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            alert("Thank you for subscribing!");
-        });
-    }
-}
+  const subscriptionForm = document.getElementById("subscriptionForm");
+  if (subscriptionForm) {
+    subscriptionForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      alert("Thank you for subscribing!");
+    });
+  }
+};
 
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
     displayTime();
     multiStepForm();
@@ -274,3 +371,63 @@ document.addEventListener('DOMContentLoaded', () => {
     displayGreeting();
     subForm();
 });
+=======
+document.addEventListener("DOMContentLoaded", () => {
+  createStarRating();
+  updateFact();
+  themeToggle();
+  displayTime();
+  handleImageNavigation();
+  multiStepForm();
+  displayGreeting();
+  subForm();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggleButton = document.getElementById("theme-toggle");
+
+  // Check if the button exists
+  if (!themeToggleButton) {
+    console.error("Theme toggle button not found!");
+    return;
+  }
+
+  // Check if there's a saved theme in localStorage
+  const savedTheme = localStorage.getItem("theme");
+
+  // If a theme is saved, apply it; otherwise, the default will be light theme
+  if (savedTheme) {
+    document.body.classList.add(savedTheme);
+  } else {
+    document.body.classList.add("light-theme");
+  }
+
+  // Function to update the button text based on the current theme
+  function updateButtonText() {
+    if (document.body.classList.contains("dark-theme")) {
+      themeToggleButton.textContent = "🌞 Light Mode"; // When dark theme is active, show "🌞 Light Mode"
+    } else {
+      themeToggleButton.textContent = "🌙 Dark Mode"; // When light theme is active, show "🌙 Dark Mode"
+    }
+  }
+
+  // Update the button text on page load
+  updateButtonText();
+
+  // Add event listener for the theme toggle button click
+  themeToggleButton.addEventListener("click", function () {
+    // Toggle the classes for light and dark themes
+    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("light-theme");
+
+    // Save the selected theme to localStorage
+    const currentTheme = document.body.classList.contains("dark-theme")
+      ? "dark-theme"
+      : "light-theme";
+    localStorage.setItem("theme", currentTheme);
+
+    // Update the button text after switching the theme
+    updateButtonText();
+  });
+});
+>>>>>>> 9d0c4f6 (light dark mode)

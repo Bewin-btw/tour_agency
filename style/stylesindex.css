@@ -37,7 +37,7 @@ figure img {
   border-radius: 10px;
 }
 
-.carousel-item img{
+.carousel-item img {
   height: 1000px;
   object-fit: cover;
   width: 100%;
@@ -164,7 +164,8 @@ blockquote {
   margin: 20px auto; /* Центрирование */
 }
 
-@media (min-width: 768px) { /* Для экранов шире 768px (например, компьютеров) */
+@media (min-width: 768px) {
+  /* Для экранов шире 768px (например, компьютеров) */
   #logo {
     max-width: 300px; /* Ограничиваем ширину логотипа */
     margin: 30px auto; /* Увеличиваем отступы */
@@ -183,7 +184,8 @@ blockquote {
   object-fit: cover; /* Обеспечиваем хороший вид изображений */
 }
 
-@media (min-width: 768px) { /* Для экранов шире 768px (компьютеры) */
+@media (min-width: 768px) {
+  /* Для экранов шире 768px (компьютеры) */
   #carouselExampleCaptions {
     max-width: 800px; /* Ограничиваем ширину карусели */
     max-height: 400px; /* Ограничиваем высоту карусели */
@@ -236,8 +238,6 @@ blockquote {
   border-color: #0056b3;
 }
 
-
-
 footer {
   background-color: #333;
   color: white;
@@ -246,4 +246,263 @@ footer {
   margin-top: 20px;
 }
 
+/* Переключатель темы */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+#about {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
 
+#theme-toggle {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  z-index: 10; /* Обеспечиваем доступность */
+  pointer-events: auto; /* Разрешаем клики */
+}
+
+#theme-toggle:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Светлая тема */
+body.light-theme {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+body.light-theme h2 {
+  color: #007bff;
+}
+
+body.light-theme blockquote {
+  background-color: #f0f8ff;
+  border-left: 5px solid #007bff;
+  color: #555;
+}
+
+/* Темная тема */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-theme h2 {
+  color: #66b2ff;
+}
+
+body.dark-theme blockquote {
+  background-color: #444;
+  border-left: 5px solid #66b2ff;
+  color: #ddd;
+}
+
+/* Карточки */
+body.light-theme .card {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .card {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #555;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Тексты карточек */
+body.light-theme .card-title {
+  color: #333;
+}
+
+body.dark-theme .card-title {
+  color: #fff;
+}
+
+body.light-theme .card-text {
+  color: #555;
+}
+
+body.dark-theme .card-text {
+  color: #bbb;
+}
+
+/* Форма */
+body.light-theme #contactForm {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme #contactForm {
+  background-color: #444;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Элементы ввода */
+body.light-theme #contactForm input,
+body.light-theme #contactForm select,
+body.light-theme #contactForm textarea {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+body.dark-theme #contactForm input,
+body.dark-theme #contactForm select,
+body.dark-theme #contactForm textarea {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-theme #contactForm input::placeholder,
+body.dark-theme #contactForm textarea::placeholder {
+  color: #bbb;
+}
+
+body.light-theme #contactForm input::placeholder,
+body.light-theme #contactForm textarea::placeholder {
+  color: #777;
+}
+
+/* Фокус элементов ввода */
+body.light-theme #contactForm input:focus,
+body.light-theme #contactForm select:focus,
+body.light-theme #contactForm textarea:focus {
+  background-color: #fff;
+  border-color: #007bff;
+  outline: none;
+}
+
+body.dark-theme #contactForm input:focus,
+body.dark-theme #contactForm select:focus,
+body.dark-theme #contactForm textarea:focus {
+  background-color: #666;
+  border-color: #88cfff;
+  outline: none;
+}
+
+/* Кнопки */
+body.light-theme #contactForm button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+body.dark-theme #contactForm button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+body.light-theme #contactForm button:hover {
+  background-color: #0056b3;
+}
+
+body.dark-theme #contactForm button:hover {
+  background-color: #004c99;
+}
+/* Светлая тема */
+body.light-theme #events {
+  background-color: #f9f9f9; /* Светлый фон */
+  color: #333; /* Чёрный текст */
+}
+
+/* Тёмная тема */
+body.dark-theme #events {
+  background-color: #444; /* Тёмный фон */
+  color: #fff; /* Белый текст */
+}
+
+body.light-theme #events .card {
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark-theme #events .card {
+  background-color: #555;
+  color: #fff;
+}
+
+body.light-theme #logo {
+  filter: none; /* Светлая тема — без изменений */
+}
+
+body.dark-theme #logo {
+  filter: brightness(0.8) contrast(1.2); /* Применяем фильтры для тёмной темы */
+}
+
+body.light-theme .logo-container {
+  background-color: #fff; /* Светлый фон */
+  color: #000; /* Чёрный текст */
+}
+
+body.dark-theme .logo-container {
+  background-color: #333; /* Тёмный фон */
+  color: #fff; /* Белый текст */
+}
+
+/* Светлая тема */
+body.light-theme #about {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Тёмная тема */
+body.dark-theme #about {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Для изображений */
+body.light-theme #about img {
+  filter: none;
+}
+
+body.dark-theme #about img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Для заголовков */
+body.light-theme #about h2 {
+  color: #007bff; /* Голубой цвет для светлой темы */
+}
+
+body.dark-theme #about h2 {
+  color: #66b2ff; /* Светлый голубой для тёмной темы */
+}
+
+/* Для абзацев */
+body.light-theme #about p {
+  color: #555;
+}
+
+body.dark-theme #about p {
+  color: #ddd;
+}

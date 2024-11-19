@@ -63,3 +63,51 @@ function filterToursByPrice(maxPrice) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggleButton = document.getElementById("theme-toggle");
+
+  // Проверка на наличие кнопки
+  if (!themeToggleButton) {
+    console.error("Кнопка переключения темы не найдена!");
+    return;
+  }
+
+  // Проверка и применение сохранённой темы из localStorage
+  const savedTheme = localStorage.getItem("theme");
+
+  // Устанавливаем сохранённую тему, иначе — светлая по умолчанию
+  if (savedTheme) {
+    document.body.classList.add(savedTheme);
+  } else {
+    document.body.classList.add("light-theme");
+  }
+
+  // Функция для изменения текста на кнопке в зависимости от текущей темы
+  function updateButtonText() {
+    themeToggleButton.textContent = document.body.classList.contains(
+      "dark-theme"
+    )
+      ? "🌞 Light Mode"
+      : "🌙 Dark Mode";
+  }
+
+  // Установка текста кнопки при загрузке
+  updateButtonText();
+
+  // Обработчик события для кнопки переключения темы
+  themeToggleButton.addEventListener("click", function () {
+    // Переключаем классы для темной и светлой темы
+    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("light-theme");
+
+    // Сохраняем текущую тему в localStorage
+    const currentTheme = document.body.classList.contains("dark-theme")
+      ? "dark-theme"
+      : "light-theme";
+    localStorage.setItem("theme", currentTheme);
+
+    // Обновляем текст кнопки
+    updateButtonText();
+  });
+});

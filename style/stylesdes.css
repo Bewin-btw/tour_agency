@@ -9,11 +9,200 @@ main {
   padding: 20px;
 }
 
+<<<<<<< HEAD
+=======
+.destination {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#fact-section {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#new-fact-button {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#new-fact-button:hover {
+  background-color: #1e88e5;
+}
+
+.fact-display {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Styling for the time section */
+#time-section {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#time-button {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#time-button:hover {
+  background-color: #1e88e5;
+  transform: scale(1.05);
+}
+
+#time-container {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#time-container.highlight {
+  background-color: yellow;
+  color: #000;
+}
+
+/* CSS for the theme switcher */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Styles for dark theme */
+body.dark-theme {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Dark theme for destination blocks */
+body.dark-theme .destination {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #444;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .theme-switch-wrapper span {
+  color: #ffffff;
+}
+
+#multi-step-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-step h3 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.form-step input,
+.form-step select {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+>>>>>>> 9d0c4f6 (light dark mode)
 
 #next-button,
 #back-button {
   padding: 10px 20px;
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
   border: none;
   border-radius: 5px;
@@ -55,7 +244,8 @@ main {
   margin-top: 20px;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -134,7 +324,6 @@ input, select {
   background-color: #0056b3;
 }
 
-
 figure img {
   width: 100%;
   border-radius: 10px;
@@ -146,4 +335,148 @@ footer {
   text-align: center;
   padding: 10px;
   margin-top: 20px;
+}
+
+/* Переключатель темы */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#theme-toggle {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Стили для секции "Destinations" */
+body.light-theme #destinations h2,
+body.dark-theme #destinations h2 {
+  font-size: 2rem;
+  color: inherit;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body.light-theme #destinations .destination-grid,
+body.dark-theme #destinations .destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+body.light-theme .destination,
+body.dark-theme .destination {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+body.light-theme .destination:hover,
+body.dark-theme .destination:hover {
+  transform: scale(1.05);
+}
+
+body.light-theme .destination img,
+body.dark-theme .destination img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+body.light-theme .destination h3,
+body.dark-theme .destination h3 {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+body.light-theme .destination p,
+body.dark-theme .destination p {
+  padding: 10px;
+  font-size: 1rem;
+  color: inherit;
+}
+
+body.light-theme .destination .book-now,
+body.dark-theme .destination .book-now {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+body.light-theme .destination .book-now:hover,
+body.dark-theme .destination .book-now:hover {
+  background-color: #004c99;
+}
+
+/* Темные стили для секции "Destinations" */
+body.dark-theme .destination {
+  background-color: #444;
+  border-color: #555;
+}
+
+body.dark-theme .destination h3,
+body.dark-theme .destination p {
+  color: #fff;
+}
+
+body.dark-theme .destination .book-now {
+  background-color: #0066cc;
+}
+
+body.dark-theme .destination .book-now:hover {
+  background-color: #004c99;
+}
+
+/* Темный режим для кнопки переключения темы */
+body.dark-theme #theme-toggle {
+  color: #fff;
+  background-color: #333;
+  border-color: #444;
+}
+
+body.dark-theme #theme-toggle:hover {
+  background-color: #444;
+  border-color: #555;
+}
+
+/* Base card styles for dark and light themes */
+.event-card .card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.event-card .card img {
+  max-height: 200px;
+  object-fit: cover;
 }

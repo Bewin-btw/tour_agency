@@ -1,18 +1,103 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-    margin: 0; 
-  }
-  
-  main {
-    flex: 1;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Темный режим для профиля */
+body.dark-theme #userProfile {
+  background-color: #444; /* Тёмный фон для профиля */
+  color: #fff; /* Белый текст */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для выделения */
+}
+
+/* Темный режим для элементов ввода профиля */
+body.dark-theme #userProfile input,
+body.dark-theme #userProfile select,
+body.dark-theme #userProfile textarea {
+  background-color: #555; /* Тёмно-серый фон элементов */
+  color: #fff; /* Белый текст */
+  border: 1px solid #666; /* Граница элементов */
+}
+
+body.dark-theme #userProfile input::placeholder,
+body.dark-theme #userProfile textarea::placeholder {
+  color: #bbb; /* Цвет текста placeholder */
+}
+
+/* При фокусе в тёмном режиме для элементов профиля */
+body.dark-theme #userProfile input:focus,
+body.dark-theme #userProfile select:focus,
+body.dark-theme #userProfile textarea:focus {
+  background-color: #666; /* Светлее при фокусе */
+  border-color: #888; /* Изменение цвета границы */
+  outline: none;
+}
+
+/* Темный режим для кнопки профиля */
+body.dark-theme #userProfile button {
+  background-color: #0066cc; /* Тёмно-синий фон кнопки */
+  color: #fff; /* Белый текст */
+  border: none;
+}
+
+body.dark-theme #userProfile button:hover {
+  background-color: #004c99; /* Ещё темнее при наведении */
+}
+
+/* Светлый режим для профиля */
+body.light-theme #userProfile {
+  background-color: #fff; /* Светлый фон */
+  color: #333; /* Тёмный текст */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень для выделения */
+}
+
+/* Светлый режим для элементов ввода профиля */
+body.light-theme #userProfile input,
+body.light-theme #userProfile select,
+body.light-theme #userProfile textarea {
+  background-color: #f9f9f9; /* Светлый фон элементов */
+  color: #333; /* Тёмный текст */
+  border: 1px solid #ccc; /* Граница элементов */
+}
+
+body.light-theme #userProfile input::placeholder,
+body.light-theme #userProfile textarea::placeholder {
+  color: #888; /* Цвет текста placeholder */
+}
+
+/* При фокусе в светлом режиме для элементов профиля */
+body.light-theme #userProfile input:focus,
+body.light-theme #userProfile select:focus,
+body.light-theme #userProfile textarea:focus {
+  background-color: #eaeaea; /* Светлее при фокусе */
+  border-color: #bbb; /* Изменение цвета границы */
+  outline: none;
+}
+
+/* Светлый режим для кнопки профиля */
+body.light-theme #userProfile button {
+  background-color: #007bff; /* Синий фон кнопки */
+  color: #fff; /* Белый текст */
+  border: none;
+}
+
+body.light-theme #userProfile button:hover {
+  background-color: #0056b3; /* Более тёмный оттенок при наведении */
+}

@@ -103,3 +103,150 @@ footer {
   border-left: 4px solid #333;
   margin: 5px 0;
 }
+
+/* Переключатель темы */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#theme-toggle {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Темные стили */
+body.dark-theme .tour-item {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .tour-title {
+  color: #fff;
+}
+
+body.dark-theme .tour-description {
+  color: #ddd;
+}
+
+body.dark-theme .tour-price {
+  color: #00cc66;
+}
+
+body.dark-theme .carousel-control-prev-icon,
+body.dark-theme .carousel-control-next-icon {
+  background-color: #fff;
+}
+
+body.dark-theme .filtered-tour {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+/* Темный режим для FAQ */
+body.dark-theme #faq-section {
+  background-color: #444;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .faq-question {
+  color: #fff;
+}
+
+body.dark-theme .faq-answer {
+  background-color: #555;
+  color: #ddd;
+  border-left: 4px solid #888;
+}
+
+/* Светлые стили */
+body.light-theme .tour-item,
+body.light-theme .filtered-tour,
+body.light-theme #faq-section {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .tour-title {
+  color: #333;
+}
+
+body.light-theme .tour-description {
+  color: #555;
+}
+
+body.light-theme .tour-price {
+  color: #006400;
+}
+
+body.light-theme .carousel-control-prev-icon,
+body.light-theme .carousel-control-next-icon {
+  background-color: #333;
+}
+
+/* Light theme for FAQ */
+body.light-theme #faq-section {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.light-theme .faq-question {
+  color: #333;
+}
+
+body.light-theme .faq-answer {
+  background-color: #f4f4f4;
+  color: #333;
+  border-left: 4px solid #ccc;
+}
+
+/* Styles for theme toggle button */
+body.light-theme #theme-toggle {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+body.light-theme #theme-toggle:hover {
+  background-color: #f1f1f1;
+  border-color: #bbb;
+}
+
+body.dark-theme #theme-toggle {
+  color: #fff;
+  background-color: #333;
+  border-color: #444;
+}
+
+body.dark-theme #theme-toggle:hover {
+  background-color: #444;
+  border-color: #555;
+}

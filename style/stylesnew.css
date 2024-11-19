@@ -157,3 +157,124 @@ footer {
 .modal-content button:hover {
   background-color: #0056b3;
 }
+
+/* Переключатель темы */
+.theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#theme-toggle {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Светлая тема */
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+body.light-theme .news-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+body.light-theme .news-category {
+  color: #555;
+}
+
+body.light-theme .news-title {
+  color: #333;
+}
+
+body.light-theme .news-description {
+  color: #666;
+}
+
+body.light-theme footer {
+  background-color: #333;
+  color: white;
+}
+
+body.light-theme .modal-content {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Темная тема */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-theme .news-item {
+  background-color: #444;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+body.dark-theme .news-category {
+  color: #bbb;
+}
+
+body.dark-theme .news-title {
+  color: #fff;
+}
+
+body.dark-theme .news-description {
+  color: #ccc;
+}
+
+body.dark-theme footer {
+  background-color: #222;
+  color: #ccc;
+}
+
+body.dark-theme .modal-content {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Темный режим для кнопок и элементов формы */
+body.dark-theme #theme-toggle {
+  color: #fff;
+  background-color: #333;
+  border-color: #444;
+}
+
+body.dark-theme #theme-toggle:hover {
+  background-color: #444;
+  border-color: #555;
+}
+
+/* Модальное окно */
+body.dark-theme .modal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .modal-content {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-theme .close {
+  color: #fff;
+}
+
+body.dark-theme .close:hover {
+  color: #ff0000;
+}
